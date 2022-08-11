@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app loads without error 1`] = `
+<div
+  className="MuiTypography-root MuiTypography-h1 MuiTypography-gutterBottom css-1401ke1-MuiTypography-root"
+>
+  Hello, App!
+</div>
+`;

@@ -1,0 +1,15 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+@font-face {
+    font-family: 'VisbyCF';
+    src: local('VisbyCF'), url(./fonts/VisbyCF-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'VisbyCFBold';
+    src: local('VisbyCF'), url(./fonts/VisbyCF-Bold.otf) format('opentype');
+}
