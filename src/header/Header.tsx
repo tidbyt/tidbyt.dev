@@ -71,7 +71,7 @@ export default function Header({ transparent, open, handleOpen, handleClose }: P
                 <IconButton
                     size="large"
                     edge="end"
-                    href="https://github.com/tidbyt/pixlet"
+                    href="https://github.com/tidbyt"
                 >
                     <GitHub />
                 </IconButton>
