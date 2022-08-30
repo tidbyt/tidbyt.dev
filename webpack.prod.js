@@ -2,7 +2,8 @@ import { merge } from 'webpack-merge';
 import common from './webpack.common.js';
 import HtmlWebPackPlugin from 'html-webpack-plugin';
 import path from 'path';
-import {fileURLToPath} from 'url';
+import { fileURLToPath } from 'url';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -14,6 +15,13 @@ const htmlPlugin = new HtmlWebPackPlugin({
     favicon: 'src/favicon.png'
 });
 
+const copyPlugin = new CopyWebpackPlugin({
+    patterns: [
+        { from: "docs/img", to: "img" },
+    ],
+});
+
+
 export default merge(common, {
     mode: 'production',
     devtool: 'source-map',
@@ -24,5 +32,16 @@ export default merge(common, {
         path: path.resolve(__dirname, 'dist/static'),
         clean: true,
     },
-    plugins: [htmlPlugin]
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: "vendor",
+                    chunks: "all"
+                }
+            }
+        }
+    },
+    plugins: [htmlPlugin, copyPlugin]
 });

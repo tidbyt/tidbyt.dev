@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import MuiAppBar, { AppBarProps } from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
+import { AppBarProps } from '@mui/material/AppBar';
 import MenuIcon from '@mui/icons-material/Menu';
 import GitHub from '@mui/icons-material/GitHub';
-import { styled, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 
 
 import Logo from './Logo';
 import { solarized } from '../theme/colors';
+
+
+import { AppBar as MuiAppBar, Box, Toolbar, IconButton, styled } from '@mui/material';
 
 
 const drawerWidth = 240;

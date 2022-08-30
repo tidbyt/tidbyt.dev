@@ -2,9 +2,9 @@
 import '@fontsource/barlow';
 import '@fontsource/material-icons';
 
-import { createTheme } from '@mui/material/styles';
+import { solarized } from './colors';
 
-import { solarized, brand } from './colors';
+import { createTheme } from '@mui/material';
 
 
 export const theme = createTheme({

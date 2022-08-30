@@ -1,15 +1,13 @@
 import React from 'react';
 
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import ChevronLeft from '@mui/icons-material/ChevronLeft';
-import { styled } from '@mui/material/styles';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListSubheader from '@mui/material/ListSubheader';
-import ListItemText from '@mui/material/ListItemText';
-import Divider from '@mui/material/Divider';
+import {
+    List,
+    ListItem,
+    ListItemButton,
+    ListSubheader,
+    ListItemText,
+    Divider,
+} from '@mui/material';
 
 type Props = {
     title: string,

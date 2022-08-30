@@ -5,6 +5,16 @@
         "@babel/preset-typescript"
     ],
     "plugins": [
+        [
+            "babel-plugin-direct-import",
+            {
+                "modules": [
+                    "@mui/system",
+                    "@mui/material",
+                    "@mui/icons-material"
+                ]
+            }
+        ],
         "@babel/plugin-proposal-class-properties"
     ]
 }

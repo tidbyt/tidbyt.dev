@@ -3,8 +3,6 @@ import React from 'react';
 
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import Link from '@mui/material/Link';
-import Typography from '@mui/material/Typography';
 
 import Row from './table/Row';
 import Table from './table/Table';
@@ -16,6 +14,8 @@ import Heading from './Heading';
 import Image from './Image';
 import ListWrapper from './list/ListWrapper';
 import Item from './list/Item';
+
+import { Link, Typography } from '@mui/material';
 
 type Props = {
     source: string

@@ -1,7 +1,6 @@
 import React from 'react';
 
-import ListItem from '@mui/material/ListItem';
-import Typography from '@mui/material/Typography';
+import { ListItem, Typography } from '@mui/material';
 
 type Props = {
     index: number,

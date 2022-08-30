@@ -11,3 +11,10 @@ Run the site:
 ```
 npm run start
 ```
+
+## Profile
+Upload the output here: https://chrisbateman.github.io/webpack-visualizer/
+
+```
+npm run profile
+```
