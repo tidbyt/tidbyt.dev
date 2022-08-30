@@ -3,7 +3,6 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Main from './main/Main';
-import Login from './login/Login';
 import store from './store';
 import AppTheme from './theme/AppTheme';
 import Home from './home/Home';
@@ -28,7 +27,6 @@ export default function App() {
                 <BrowserRouter>
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route path="/login" element={<Login />} />
                         {importAll(ROUTES)}
                     </Routes>
                 </BrowserRouter>
