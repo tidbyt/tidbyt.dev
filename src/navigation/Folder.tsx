@@ -10,7 +10,7 @@ import {
     Divider,
 } from '@mui/material';
 
-import { Doc } from './docs';
+import { Doc, cleanFolderName } from './docs';
 
 
 type Props = {
@@ -43,7 +43,7 @@ export default function Folder({ title, docs }: Props) {
             <List
                 subheader={
                     <ListSubheader component="div" id="nested-list-subheader">
-                        {title}
+                        {cleanFolderName(title)}
                     </ListSubheader>
                 }
             >

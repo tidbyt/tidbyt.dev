@@ -1,3 +1,5 @@
+// TODO: all of the sorting is implicit from Webpack. We should actually sort
+// everything based on the number prefix.
 const DOCS = require.context('../../docs', true, /\.(md)$/);
 
 export type Doc = {
@@ -36,16 +38,35 @@ export function getDocs(): Doc[] {
 export function genDoc(path: string): Doc {
     let parts = path.split("/");
     let name = parts[parts.length - 1].replace('.md', '');
-    let suffix = path.replace('.md', '').replace("./", '');
-    let url = `/docs/${suffix}`;
     let doc: Doc = {
-        name: titleCase(name),
-        url: url,
+        name: genName(name),
+        url: genURL(path),
         path: path,
         source: DOCS(path).default,
     }
 
     return doc;
+}
+
+export function genURL(path: string): string {
+    let converted = path.replace('.md', '').replace("./", '');
+    let removeSort = converted.replace(/\d\d_/g, '');
+    let convertUnderscores = removeSort.replace(/_/g, '-');
+    let url = `/docs/${convertUnderscores}`;
+    return url;
+}
+
+export function genName(path: string): string {
+    let parts = path.split("/");
+    let fileName = parts[parts.length - 1].replace('.md', '');
+    let removeSort = fileName.replace(/\d\d_/g, '');
+    let name = titleCase(removeSort.replace(/_/, ' '));
+    return name;
+}
+
+export function cleanFolderName(name: string): string {
+    let removeSort = name.replace(/\d\d_/g, '');
+    return titleCase(removeSort.replace(/_/, ' '));
 }
 
 export function titleCase(input: string): string {
