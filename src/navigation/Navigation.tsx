@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import ChevronLeft from '@mui/icons-material/ChevronLeft';
 
@@ -15,6 +16,7 @@ import {
     ListItemText,
     Divider,
 } from '@mui/material';
+import { getDirs } from './docs';
 
 const drawerWidth = 240;
 
@@ -34,6 +36,19 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 export default function Navigation({ open, handleOpen, handleClose }: Props) {
+    let dirs = getDirs();
+
+    function genFolders(): JSX.Element[] {
+        let folders: JSX.Element[] = [];
+
+        dirs.forEach((value, key) => (
+            folders.push(<Folder key={key} title={key} docs={value} />)
+        ));
+
+        return folders;
+    }
+
+
     return (
         <Drawer
             sx={{
@@ -54,9 +69,7 @@ export default function Navigation({ open, handleOpen, handleClose }: Props) {
                 </IconButton>
             </DrawerHeader>
             <Divider />
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                <Folder key={index} title={text} docs={['Foo', 'Bar']} />
-            ))}
+            {genFolders()}
         </Drawer>
     );
 }
