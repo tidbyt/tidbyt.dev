@@ -19,6 +19,7 @@
     "@svgr/webpack": "6.2.1",
     "@types/jest": "27.5.1",
     "@types/react-test-renderer": "18.0.0",
+    "@types/webpack-env": "^1.18.0",
     "babel-jest": "28.1.0",
     "babel-loader": "8.2.5",
     "babel-plugin-direct-import": "1.0.0",

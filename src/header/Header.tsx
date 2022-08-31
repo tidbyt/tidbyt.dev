@@ -4,14 +4,12 @@ import { Link } from 'react-router-dom';
 import { AppBarProps } from '@mui/material/AppBar';
 import MenuIcon from '@mui/icons-material/Menu';
 import GitHub from '@mui/icons-material/GitHub';
-import { useTheme } from '@mui/material/styles';
+import { AppBar as MuiAppBar, Box, Toolbar, IconButton, styled, PropTypes } from '@mui/material';
 
 
 import Logo from './Logo';
 import { solarized } from '../theme/colors';
 
-
-import { AppBar as MuiAppBar, Box, Toolbar, IconButton, styled } from '@mui/material';
 
 
 const drawerWidth = 240;
@@ -41,7 +39,7 @@ const AppBar = styled(MuiAppBar, {
 }));
 
 export default function Header({ transparent, open, handleOpen, handleClose }: Props) {
-    let color = "background";
+    let color: PropTypes.Color = 'background';
     let elevation = 1;
     if (transparent) {
         color = "transparent";

@@ -11,9 +11,9 @@ const ROUTES = require.context('../docs', true, /\.(md)$/)
 
 export default function App() {
 
-    function importAll(r) {
-        let docs = [];
-        ROUTES.keys().forEach((item) => {
+    function importAll(r: any): any[] {
+        let docs: any[] = [];
+        ROUTES.keys().forEach((item: any) => {
             let doc = item.replace('.md', '').replace("./", '');
             let path = `/docs/${doc}`;
             docs.push(<Route key={path} path={path} element={<Main source={r(item).default} />} />);
