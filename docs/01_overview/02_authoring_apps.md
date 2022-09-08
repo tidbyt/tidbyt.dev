@@ -1,5 +1,7 @@
 # Authoring Apps
-If you haven't already, check out the [tutorial](tutorial.md) for how to get started writing apps. This guide picks up where the tutorial leaves off and provides practices and philosophy on how to build apps using pixlet.
+If you haven't already, check out the [tutorial](./03_tutorial.md) for how to get started writing apps. This guide picks up where the tutorial leaves off and provides practices and philosophy on how to build apps using pixlet.
+
+[test](../02_build/build.md)
 
 ## Architecture
 Pixlet is heavily influenced by the way Tidbyt devices work. The Tidbyt displays tiny 64x32 animations and images. It keeps a local cache of the apps that are installed on it.

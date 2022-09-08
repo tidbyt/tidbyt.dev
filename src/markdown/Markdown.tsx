@@ -4,6 +4,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw'
+import {useLocation} from 'react-router-dom';
 
 import Row from './table/Row';
 import Table from './table/Table';
@@ -13,23 +14,27 @@ import Body from './table/Body';
 import CodeBlock from './CodeBlock';
 import Heading from './Heading';
 import Image from './Image';
+import Link from './Link';
 import ListWrapper from './list/ListWrapper';
 import Item from './list/Item';
+import { genURL, convertRelativePath } from '../navigation/docs';
 
-import { Link, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 
 type Props = {
     source: string
 }
 
 export default function Markdown({ source }: Props) {
+    const location = useLocation();
+
     return (
         <ReactMarkdown
             children={source}
             transformLinkUri={(href, children, title) => {
                 if (href.endsWith('.md')) {
-                    let a = href.replace('.md', '');
-                    return `${a}`;
+                    let path = convertRelativePath(href, location.pathname);
+                    return genURL(path);
                 }
                 return href;
             }}

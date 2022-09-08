@@ -49,11 +49,29 @@ export function genDoc(path: string): Doc {
 }
 
 export function genURL(path: string): string {
-    let converted = path.replace('.md', '').replace("./", '');
+    let converted = path.replace('.md', '').replace('../', '').replace('./', '');
     let removeSort = converted.replace(/\d\d_/g, '');
     let convertUnderscores = removeSort.replace(/_/g, '-');
     let url = `/docs/${convertUnderscores}`;
     return url;
+}
+
+// TODO: support relative paths in nested directories. Example ../ in multiple
+// levels of nesting.
+export function convertRelativePath(path: string, currURL: string): string {
+    // If the doc is in the same directory, return the current url prefixed to
+    // the path.
+    let pruneDocs = currURL.replace('/docs/', '');
+    let parts = pruneDocs.split('/');
+    if (path.startsWith('./') && parts.length > 1) {
+        let dirs = parts.slice(0, parts.length - 1);
+        let prefix = dirs.join('/')
+        return path.replace('./', `${prefix}/`);
+    }
+
+    // If the doc is relatively linked, it works by default so long as it's relative
+    // to the doc root.
+    return path;
 }
 
 export function genName(path: string): string {
