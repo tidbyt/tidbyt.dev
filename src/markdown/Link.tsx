@@ -10,6 +10,14 @@ type Props = {
 }
 
 export default function Link({ href, children }: Props) {
+    if (href.startsWith('http')) {
+        return (
+            <MuiLink href={href}>
+                {children}
+            </MuiLink>
+        );
+    }
+
     return (
         <MuiLink component={RouterLink} to={href}>
             {children}
