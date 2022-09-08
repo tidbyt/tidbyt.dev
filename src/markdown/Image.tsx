@@ -12,9 +12,10 @@ type Props = {
 export default function Image({ src, alt, title, children }: Props) {
     return (
         <Box
+            width={600}
             component="img"
             alt={alt}
             src={src}
-      />
+        />
     );
 }

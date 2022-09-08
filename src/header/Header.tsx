@@ -1,17 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import MuiAppBar, { AppBarProps } from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
+import { AppBarProps } from '@mui/material/AppBar';
 import MenuIcon from '@mui/icons-material/Menu';
 import GitHub from '@mui/icons-material/GitHub';
-import { styled, useTheme } from '@mui/material/styles';
+import { AppBar as MuiAppBar, Box, Toolbar, IconButton, styled, PropTypes } from '@mui/material';
 
 
 import Logo from './Logo';
 import { solarized } from '../theme/colors';
+
 
 
 const drawerWidth = 240;
@@ -41,7 +39,7 @@ const AppBar = styled(MuiAppBar, {
 }));
 
 export default function Header({ transparent, open, handleOpen, handleClose }: Props) {
-    let color = "background";
+    let color: PropTypes.Color = 'background';
     let elevation = 1;
     if (transparent) {
         color = "transparent";
@@ -71,7 +69,7 @@ export default function Header({ transparent, open, handleOpen, handleClose }: P
                 <IconButton
                     size="large"
                     edge="end"
-                    href="https://github.com/tidbyt/pixlet"
+                    href="https://github.com/tidbyt"
                 >
                     <GitHub />
                 </IconButton>

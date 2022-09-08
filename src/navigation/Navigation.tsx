@@ -1,17 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
 import ChevronLeft from '@mui/icons-material/ChevronLeft';
-import { styled } from '@mui/material/styles';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListSubheader from '@mui/material/ListSubheader';
-import ListItemText from '@mui/material/ListItemText';
-import Divider from '@mui/material/Divider';
 
 import Folder from './Folder'
+
+import {
+    Drawer,
+    IconButton,
+    styled,
+    List,
+    ListItem,
+    ListItemButton,
+    ListSubheader,
+    ListItemText,
+    Divider,
+} from '@mui/material';
+import { getDirs } from './docs';
 
 const drawerWidth = 240;
 
@@ -31,6 +36,19 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 export default function Navigation({ open, handleOpen, handleClose }: Props) {
+    let dirs = getDirs();
+
+    function genFolders(): JSX.Element[] {
+        let folders: JSX.Element[] = [];
+
+        dirs.forEach((value, key) => (
+            folders.push(<Folder key={key} title={key} docs={value} />)
+        ));
+
+        return folders;
+    }
+
+
     return (
         <Drawer
             sx={{
@@ -51,9 +69,7 @@ export default function Navigation({ open, handleOpen, handleClose }: Props) {
                 </IconButton>
             </DrawerHeader>
             <Divider />
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                <Folder key={index} title={text} docs={['Foo', 'Bar']} />
-            ))}
+            {genFolders()}
         </Drawer>
     );
 }

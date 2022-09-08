@@ -17,7 +17,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
 
 const copyPlugin = new CopyWebpackPlugin({
     patterns: [
-        {from: "docs/img", to: "static/img"},
+        { from: "docs/img", to: "img" },
     ],
 });
 
@@ -30,13 +30,6 @@ export default merge(common, {
     devServer: {
         port: 3000,
         historyApiFallback: true,
-        proxy: [
-            {
-                context: ['/api'],
-                target: 'http://localhost:8080',
-                ws: true,
-            },
-        ],
     },
     plugins: [htmlPlugin, copyPlugin]
 });

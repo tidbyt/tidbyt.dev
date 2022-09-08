@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TableCell from '@mui/material/TableCell';
+import { TableCell } from '@mui/material';
 
 type Props = {
     children: JSX.Element,

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import List from '@mui/material/List';
+import { List } from '@mui/material';
 
 type Props = {
     children: JSX.Element,

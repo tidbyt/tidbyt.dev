@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
 
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-
-import Toolbar from '@mui/material/Toolbar';
-import Container from '@mui/material/Container';
 import Handyman from '@mui/icons-material/Handyman';
 import Forum from '@mui/icons-material/Forum';
 import RocketLaunch from '@mui/icons-material/RocketLaunch';
@@ -17,6 +12,8 @@ import Navigation from '../navigation/Navigation';
 import LogoRound from '../header/LogoRound';
 import RotateText from '../header/RotateText';
 import { solarized } from '../theme/colors';
+
+import { Grid, Box, Toolbar, Container } from '@mui/material';
 
 export default function Home() {
     const [open, setOpen] = useState(false);
@@ -63,7 +60,7 @@ export default function Home() {
                             <Highlight href="/docs/integrate/integrate" heading="Integrate" desc="Integrate with the Tidbyt API" icon={<Autorenew sx={{ fontSize: 48 }} />} />
                         </Grid>
                         <Grid item xs={12} md={6}>
-                            <Highlight href="/docs/overview/overview" heading="Socialize" desc="Learn from the Tidbyt Community" icon={<Forum sx={{ fontSize: 48 }} />} />
+                            <Highlight href="/docs/overview/overview" heading="Engage" desc="Learn from the Tidbyt Community" icon={<Forum sx={{ fontSize: 48 }} />} />
                         </Grid>
                     </Grid>
                 </Container>

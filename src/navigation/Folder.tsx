@@ -1,38 +1,53 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import ChevronLeft from '@mui/icons-material/ChevronLeft';
-import { styled } from '@mui/material/styles';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListSubheader from '@mui/material/ListSubheader';
-import ListItemText from '@mui/material/ListItemText';
-import Divider from '@mui/material/Divider';
+import {
+    List,
+    ListItem,
+    ListItemButton,
+    ListSubheader,
+    ListItemText,
+    Divider,
+} from '@mui/material';
+
+import { Doc, cleanFolderName } from './docs';
+
 
 type Props = {
     title: string,
-    docs: Array<string>,
+    docs: Array<Doc>,
 }
 
 export default function Folder({ title, docs }: Props) {
+    function genFolderItems(): JSX.Element[] {
+        let items: JSX.Element[] = [];
+
+        docs.forEach((value) => (
+            items.push(
+                <ListItem key={value.path} disablePadding>
+                    <ListItemButton>
+                        <Link style={{ color: "inherit", textDecoration: "inherit" }} to={value.url}>
+                            <ListItemText primary={value.name} />
+                        </Link>
+                    </ListItemButton>
+                </ListItem>
+            )
+        ));
+
+        return items;
+    }
+
+
     return (
         <React.Fragment>
             <List
                 subheader={
                     <ListSubheader component="div" id="nested-list-subheader">
-                        {title}
+                        {cleanFolderName(title)}
                     </ListSubheader>
                 }
             >
-                {docs.map((text, index) => (
-                    <ListItem key={index} disablePadding>
-                        <ListItemButton>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
+                {genFolderItems()}
             </List>
             <Divider />
         </React.Fragment>
