@@ -14,11 +14,12 @@ import Body from './table/Body';
 import CodeBlock from './CodeBlock';
 import Heading from './Heading';
 import Image from './Image';
+import Link from './Link';
 import ListWrapper from './list/ListWrapper';
 import Item from './list/Item';
 import { genURL, convertRelativePath } from '../navigation/docs';
 
-import { Link, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 
 type Props = {
     source: string
