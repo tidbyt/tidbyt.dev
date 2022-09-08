@@ -273,4 +273,4 @@ we'd see a cache miss as the old record has expired.
 
 ## What's next?
 
-Take a look at the guide on [authoring apps](authoring_apps.md), the [Widget reference](widgets.md), and start hacking!
+Take a look at the guide on [authoring apps](./02_authoring_apps.md), the [Widget reference](../05_reference/widgets.md), and start hacking!
