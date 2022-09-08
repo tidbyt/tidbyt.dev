@@ -17,7 +17,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
 
 const copyPlugin = new CopyWebpackPlugin({
     patterns: [
-        { from: "docs/img", to: "static/img" },
+        { from: "docs/img", to: "img" },
     ],
 });
 
