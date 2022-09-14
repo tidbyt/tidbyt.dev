@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes as RouterRoutes } from "react-router-dom";
 import Main from '../main/Main';
 import Home from '../home/Home';
 import { getDocs } from './docs';
+import PublicAPI from '../publicapi/PublicAPI';
 
 
 export default function Routes() {
@@ -22,6 +23,7 @@ export default function Routes() {
         <BrowserRouter>
             <RouterRoutes>
                 <Route path="/" element={<Home />} />
+                <Route path="/docs/api" element={<PublicAPI />} />
                 {genRoutes()}
             </RouterRoutes>
         </BrowserRouter>
