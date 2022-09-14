@@ -5,6 +5,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import ThemeProvider from '@mui/system/ThemeProvider';
 
 import { theme } from './theme';
+import './styles.css';
 
 
 type Props = {
