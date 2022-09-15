@@ -1,21 +1,20 @@
 # Publish
 
 Did you know that the vast majority of Tidbyt apps are contributed by
-other users and community members? If not, then now you do!
+other users and community members? When you browse the Tidbyt
+iOS/Android app for new content to add to your Tidbyt, you'll notice
+that plenty of them have an attribution given like in the example
+below. These are all community contributed apps.
 
 ![A community contributed app as seen in Tidbyt's Android app](img/publish_attribution_phase_pf_moon.png)
 
-When you browse the Tidbyt iOS/Android app for new content to add to
-your Tidbyt, you'll notice that plenty of them have an attribution
-given like in the example above. These are all community contributed
-apps.
 
 ## How to contribute
 
 The community apps can be found in our public github repository over
 at
 [github.com/tidbyt/community/](htts://github.com/tidbyt/community/). It's
-all Free and Open Source Software, so you're free to borrow ideas,
+all Free and Open Source Software, so you're welcome to borrow ideas,
 code and design from other apps as you see fit. The community repo is
 a great place to learn more about how to write code for your own
 Tidbyt.
