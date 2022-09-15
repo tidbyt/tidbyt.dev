@@ -13,7 +13,7 @@ below. These are all community contributed apps.
 
 The community apps can be found in our public github repository over
 at
-[github.com/tidbyt/community/](htts://github.com/tidbyt/community/). It's
+[github.com/tidbyt/community/](https://github.com/tidbyt/community/). It's
 all Free and Open Source Software, so you're welcome to borrow ideas,
 code and design from other apps as you see fit. The community repo is
 a great place to learn more about how to write code for your own

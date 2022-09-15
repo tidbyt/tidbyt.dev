@@ -13,10 +13,10 @@ export default function Item({ index, ordered, children }: Props) {
     if (ordered) {
         prefix = `${index + 1}.) `;
     }
-    
+
     return (
-        <ListItem>
-            <Typography>
+        <ListItem key={index} sx={{ paddingTop: 0, paddingBottom: 0 }}>
+            <Typography component="span" variant="body2">
                 {prefix}{children}
             </Typography>
         </ListItem>
