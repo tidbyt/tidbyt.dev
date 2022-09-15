@@ -19,6 +19,8 @@ import ListWrapper from './list/ListWrapper';
 import Item from './list/Item';
 import Paragraph from './Paragraph';
 import { genURL, convertRelativePath } from '../navigation/docs';
+import { Divider } from '@mui/material';
+import HorizontalRule from './HorizontalRule';
 
 type Props = {
     source: string
@@ -62,6 +64,7 @@ export default function Markdown({ source }: Props) {
                 ul: ListWrapper,
                 li: Item,
                 img: Image,
+                hr: HorizontalRule,
             }}
         />
     )
