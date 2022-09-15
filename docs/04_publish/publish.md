@@ -32,7 +32,8 @@ developers) to make sure it's up to snuff.
 Once a new app is merged, it'll enter a Beta stage during which only a
 small group of users can install it on their Tidbyt devices. When an
 app has been deemed "good to go", it is then released to all other
-Tidbyt users.
+Tidbyt users. If you want to sign up to become a beta tester, you can
+do so [here](https://forms.gle/zGqUyCv9kUh6YUic9).
 
 For the nitty gritty on how to get a new app published,
 head over to [the docs in the community
