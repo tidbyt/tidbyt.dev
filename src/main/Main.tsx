@@ -52,7 +52,7 @@ export default function Main({ source }: Props) {
             <Header transparent={false} open={open} handleOpen={handleOpen} handleClose={handleClose} />
             <Navigation open={open} handleOpen={handleOpen} handleClose={handleClose} />
             <Content open={open}>
-                <Container>
+                <Container maxWidth="md">
                     <Toolbar />
                     <Markdown source={source} />
                 </Container>

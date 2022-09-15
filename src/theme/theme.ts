@@ -56,5 +56,8 @@ export const theme = createTheme({
         h6: {
             fontFamily: '"VisbyCFBold"',
         },
+        body2: {
+            fontSize: "20px",
+        }
     },
 });
