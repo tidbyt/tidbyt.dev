@@ -33,11 +33,12 @@ export default function Markdown({ source }: Props) {
         <ReactMarkdown
             children={source}
             transformLinkUri={(href, children, title) => {
-                if (href.endsWith('.md')) {
-                    let path = convertRelativePath(href, location.pathname);
-                    return genURL(path);
+                if (href.startsWith('http')) {
+                    return href;
                 }
-                return href;
+
+                let path = convertRelativePath(href, location.pathname);
+                return genURL(path);
             }}
             transformImageUri={(src, alt, title) => {
                 return `/static/${src}`;
