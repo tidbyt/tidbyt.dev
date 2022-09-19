@@ -83,6 +83,9 @@ export default function Home() {
                             <Grid item xs={12} md={6}>
                                 <Highlight href="/docs/overview/overview" heading="Engage" desc="Learn from the Tidbyt Community" icon={<Forum sx={{ fontSize: 48 }} />} />
                             </Grid>
+                            <Grid item xs={12} display={{ xs: "block", md: "none" }}>
+                                <Box height="80px" />
+                            </Grid>
                         </Grid>
                     </Container>
                 </Content>
