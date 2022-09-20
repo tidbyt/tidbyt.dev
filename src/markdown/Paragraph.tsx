@@ -8,7 +8,7 @@ type Props = {
 
 export default function Paragraph({ children }: Props) {
     return (
-        <Typography mt={4} mb={0} variant="body2">
+        <Typography mt={0} mb={4} variant="body2">
             {children}
         </Typography>
     );

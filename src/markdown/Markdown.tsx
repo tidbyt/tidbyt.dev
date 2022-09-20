@@ -5,6 +5,8 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw'
 import { useLocation } from 'react-router-dom';
+import remarkUnwrapImages from 'remark-unwrap-images'
+
 
 import Row from './table/Row';
 import Table from './table/Table';
@@ -21,6 +23,7 @@ import Paragraph from './Paragraph';
 import { genURL, convertRelativePath } from '../navigation/docs';
 import { Divider } from '@mui/material';
 import HorizontalRule from './HorizontalRule';
+
 
 type Props = {
     source: string
@@ -43,7 +46,7 @@ export default function Markdown({ source }: Props) {
             transformImageUri={(src, alt, title) => {
                 return `/static/${src}`;
             }}
-            remarkPlugins={[remarkGfm]}
+            remarkPlugins={[remarkGfm, remarkUnwrapImages]}
             rehypePlugins={[rehypeRaw]}
             components={{
                 code: CodeBlock,

@@ -8,8 +8,8 @@ type Props = {
 
 export default function MyTable({ children }: Props) {
     return (
-        <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableContainer>
+            <Table>
                 {children}
             </Table>
         </TableContainer>

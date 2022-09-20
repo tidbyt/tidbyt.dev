@@ -9,7 +9,9 @@ biased.
 
 You should be able to run the Pixlet CLI like so:
 
-`$ pixlet render examples/clock.star`
+```bash
+$ pixlet render examples/clock.star
+```
 
 This should in turn run `clock.star` and produce a `clock.webp` file.
 
@@ -21,7 +23,9 @@ examples/clock.webp: RIFF (little-endian) data, Web/P image
 For local development, its often convenient to run pixlet in "serve"
 mode:
 
-`$ pixlet serve --watch examples/clock.star`
+```
+$ pixlet serve --watch examples/clock.star
+```
 
 Direct your web browser to http://localhost:8080, and your rendered app will
 appear.

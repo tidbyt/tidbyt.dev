@@ -12,10 +12,6 @@ A quick note about colors.  When specifying colors, use a CSS-like
 hexdecimal color specification.  Pixlet supports "#rgb", "#rrggbb",
 "#rgba", and "#rrggbbaa" color specifications.
 
-1. Foo bar
-2. Bar foo
-
-
 ## Animation
 Animations turns a list of children into an animation, where each
 child is a frame.
