@@ -31,10 +31,17 @@ export default function Highlight({ heading, desc, href, icon }: Props) {
                     <Grid sx={{ justifyContent: "center", display: "flex", alignItems: "center" }} item xs={2}>
                         {icon}
                     </Grid>
-                    <Grid item xs={10}>
+                    <Grid item xs={10} display={{ xs: "none", md: "block" }}>
                         <Typography sx={{
                             color: solarized.base1,
                         }} variant="h2">
+                            {heading}
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={10} display={{ xs: "block", md: "none" }}>
+                        <Typography sx={{
+                            color: solarized.base1,
+                        }} variant="h3">
                             {heading}
                         </Typography>
                     </Grid>

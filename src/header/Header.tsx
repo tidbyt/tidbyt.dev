@@ -1,18 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { AppBarProps } from '@mui/material/AppBar';
 import MenuIcon from '@mui/icons-material/Menu';
 import GitHub from '@mui/icons-material/GitHub';
-import { AppBar as MuiAppBar, Box, Toolbar, IconButton, styled, PropTypes } from '@mui/material';
+import { Box, Toolbar, IconButton } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+import AppBar from './AppBar';
 
 
 import Logo from './Logo';
 import { solarized } from '../theme/colors';
 
 
-
-const drawerWidth = 240;
 
 type Props = {
     transparent: boolean,
@@ -21,33 +22,23 @@ type Props = {
     handleClose: () => void;
 }
 
-const AppBar = styled(MuiAppBar, {
-    shouldForwardProp: (prop) => prop !== 'open',
-})<AppBarProps>(({ theme, open }) => ({
-    transition: theme.transitions.create(['margin', 'width'], {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen,
-    }),
-    ...(open && {
-        width: `calc(100% - ${drawerWidth}px)`,
-        marginLeft: `${drawerWidth}px`,
-        transition: theme.transitions.create(['margin', 'width'], {
-            easing: theme.transitions.easing.easeOut,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-    }),
-}));
+export default function Header({ open, handleOpen }: Props) {
+    const theme = useTheme();
+    const desktop = useMediaQuery(theme.breakpoints.up('sm'));
 
-export default function Header({ transparent, open, handleOpen, handleClose }: Props) {
-    let color: PropTypes.Color = 'background';
-    let elevation = 1;
-    if (transparent) {
-        color = "transparent";
-        elevation = 0;
+    let styles = {
+        mr: 2
+    }
+
+    if (desktop) {
+        styles = {
+            ...styles,
+            ...(open && { display: 'none' }),
+        }
     }
 
     return (
-        <AppBar position="fixed" open={open} color={color} elevation={elevation} sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
+        <AppBar open={open}>
             <Toolbar>
                 <IconButton
                     size="large"
@@ -55,7 +46,7 @@ export default function Header({ transparent, open, handleOpen, handleClose }: P
                     color="inherit"
                     aria-label="open drawer"
                     onClick={handleOpen}
-                    sx={{ mr: 2, ...(open && { display: 'none' }) }}
+                    sx={styles}
                 >
                     <MenuIcon />
                 </IconButton>

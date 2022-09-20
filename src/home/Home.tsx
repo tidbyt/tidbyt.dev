@@ -10,30 +10,11 @@ import css from './home.css';
 import Header from '../header/Header';
 import Navigation from '../navigation/Navigation';
 import LogoRound from '../header/LogoRound';
+import Content from '../content/Content';
 import RotateText from '../header/RotateText';
 import { solarized } from '../theme/colors';
 
-import { Grid, Box, Toolbar, Container, styled } from '@mui/material';
-
-const drawerWidth = 240;
-
-const Content = styled(Box, { shouldForwardProp: (prop) => prop !== 'open' })<{
-    open?: boolean;
-}>(({ theme, open }) => ({
-    flexGrow: 1,
-    padding: theme.spacing(3),
-    transition: theme.transitions.create('margin', {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen,
-    }),
-    ...(open && {
-        transition: theme.transitions.create('margin', {
-            easing: theme.transitions.easing.easeOut,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-        marginLeft: `${drawerWidth}px`,
-    }),
-}));
+import { Grid, Box, Toolbar, Container } from '@mui/material';
 
 export default function Home() {
     const [open, setOpen] = useState(false);
@@ -48,7 +29,7 @@ export default function Home() {
 
     return (
         <Box sx={{ flexGrow: 1, backgroundColor: solarized.base03 }}>
-            <Header transparent={true} open={open} handleOpen={handleOpen} handleClose={handleClose} />
+            <Header transparent={false} open={open} handleOpen={handleOpen} handleClose={handleClose} />
             <Navigation open={open} handleOpen={handleOpen} handleClose={handleClose} />
             <Box
                 display="flex"
@@ -56,7 +37,7 @@ export default function Home() {
                 alignItems="center"
                 minHeight="100vh"
             >
-                <Content open={open}>
+                <Content disabled={true}>
                     <Container sx={{ mt: 4 }}>
                         <Toolbar />
                         <Grid
@@ -82,6 +63,9 @@ export default function Home() {
                             </Grid>
                             <Grid item xs={12} md={6}>
                                 <Highlight href="/docs/overview/overview" heading="Engage" desc="Learn from the Tidbyt Community" icon={<Forum sx={{ fontSize: 48 }} />} />
+                            </Grid>
+                            <Grid item xs={12} display={{ xs: "block", md: "none" }}>
+                                <Box height="80px" />
                             </Grid>
                         </Grid>
                     </Container>
