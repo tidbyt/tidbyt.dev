@@ -8,7 +8,7 @@ type Props = {
 
 export default function ListWrapper({ children }: Props) {
     return (
-        <List dense={true} sx={{ marginTop: -4, marginBottom: 4 }}>
+        <List dense={true} sx={{ marginBottom: 4 }}>
             {children}
         </List>
     );
