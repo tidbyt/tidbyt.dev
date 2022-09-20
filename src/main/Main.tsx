@@ -38,7 +38,7 @@ export default function Main({ source }: Props) {
                     <Markdown source={source} />
                 </Container>
             </Content>
-            <Box height="300px" />
+            <Box height="80px" />
         </Box>
     )
 }

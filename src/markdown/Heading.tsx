@@ -25,7 +25,7 @@ export default function Heading({ level, children }: Props) {
             case 1:
                 return 2;
             default:
-                return -3;
+                return 0;
         }
     }
 

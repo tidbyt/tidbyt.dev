@@ -15,7 +15,7 @@ export default function Item({ index, ordered, children }: Props) {
     }
 
     return (
-        <ListItem key={index} sx={{ paddingTop: 0, paddingBottom: 0 }}>
+        <ListItem key={index}>
             <Typography component="span" variant="body2">
                 {prefix}{children}
             </Typography>

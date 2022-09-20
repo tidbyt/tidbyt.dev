@@ -15,6 +15,10 @@ export default function Image({ src, alt, title, children }: Props) {
             <Grid container>
                 <Grid item xs={12} md={8}>
                     <Box
+                        sx={{
+                            borderRadius: 2,
+                            marginBottom: 4,
+                        }}
                         maxWidth="100%"
                         height="auto"
                         component="img"
