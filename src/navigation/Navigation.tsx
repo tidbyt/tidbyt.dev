@@ -5,6 +5,8 @@ import ChevronLeft from '@mui/icons-material/ChevronLeft';
 
 import Folder from './Folder'
 
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import {
     Drawer,
     IconButton,
@@ -36,6 +38,9 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 export default function Navigation({ open, handleOpen, handleClose }: Props) {
+    const theme = useTheme();
+    const desktop = useMediaQuery(theme.breakpoints.up('sm'));
+
     let dirs = getDirs();
 
     function genFolders(): JSX.Element[] {
@@ -48,6 +53,10 @@ export default function Navigation({ open, handleOpen, handleClose }: Props) {
         return folders;
     }
 
+    let variant = 'temporary';
+    if (desktop) {
+        variant = 'persistent';
+    }
 
     return (
         <Drawer
@@ -59,7 +68,7 @@ export default function Navigation({ open, handleOpen, handleClose }: Props) {
                     boxSizing: 'border-box',
                 },
             }}
-            variant="persistent"
+            variant={variant}
             anchor="left"
             open={open}
         >
