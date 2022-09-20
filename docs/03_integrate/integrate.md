@@ -9,7 +9,7 @@ Tidbyt API.
 
 Let's say you've [built](../02_build/build.md) a beautiful bitcoin
 tracker located in `examples/bitcoin.star`. You can easily render this
-to a webp image using `pixlet render`:
+to a webp image using pixlet:
 
 `pixlet render examples/bitcoin.star`
 
@@ -20,8 +20,8 @@ General > Get API Key. The Device ID uniquely identifies your device,
 and the API Token demonstrates that you are authorized to control the
 device.
 
-*NOTE:* Anyone who has access to your API Token will be able to
-control your device, so be careful!
+**NOTE*:* Anyone who has access to your API Token will be able to
+control your device, so be careful sharing it!
 
 To "push" the Bitcoin graphic to your Tidbyt, run:
 
@@ -105,5 +105,8 @@ In return, you should get a json object with information about your device. It'l
 }
 ```
 
-Make sure to pass the `-H` flag anytime you're performing a request to
-an endpoint that requires authentication (i.e. most of them.)
+The key component of that command line is the `-H` flag. Make sure to
+included when performing requests to endpoints that require
+autentication!
+
+That's pretty much all there's too it. Now go forth and build a thing!
