@@ -53,7 +53,7 @@ export default function Home() {
                                 </Box>
                             </Grid>
                             <Grid item xs={12} md={6}>
-                                <Highlight href="/docs/build/build" heading="Build" desc="Build an app for your Tidbyt" icon={<Handyman sx={{ fontSize: 48 }} />} />
+                                <Highlight href="/docs/build/getting-started" heading="Build" desc="Build an app for your Tidbyt" icon={<Handyman sx={{ fontSize: 48 }} />} />
                             </Grid>
                             <Grid item xs={12} md={6}>
                                 <Highlight href="/docs/publish/publish" heading="Publish" desc="Publish your app for all Tidbyt users" icon={<RocketLaunch sx={{ fontSize: 48 }} />} />
