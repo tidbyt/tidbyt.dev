@@ -1,58 +1,9 @@
-# Tutorial: A Bitcoin price tracker
+# A Crypto Tracker
 
 This article walks you through how to build a simple Bitcoin tracker
 using Pixlet. It looks pretty great on a
 [Tidbyt](http://www.tidbyt.com/) display, although we're admittedly
 biased.
-
-## Running Pixlet
-
-You should be able to run the Pixlet CLI like so:
-
-```bash
-$ pixlet render examples/clock.star
-```
-
-This should in turn run `clock.star` and produce a `clock.webp` file.
-
-```console
-$ file examples/clock.webp
-examples/clock.webp: RIFF (little-endian) data, Web/P image
-```
-
-For local development, its often convenient to run pixlet in "serve"
-mode:
-
-```
-$ pixlet serve --watch examples/clock.star
-```
-
-Direct your web browser to http://localhost:8080, and your rendered app will
-appear.
-
-## Hello, World!
-
-Pixlet applets are written in a simple, Python-like language called
-Starlark. Here's the venerable Hello World program:
-
-```starlark
-load("render.star", "render")
-def main():
-    return render.Root(
-        child = render.Text("Hello, World!")
-    )
-```
-
-On the very first row we load the Pixlet render library, which gives
-us access to Pixlet's [full set of Widgets](widgets.md). Next is the
-mandatory `main()` function, which must always return a `Root`
-Widget. In our case, we pass `Root` a `Text` Widget as child.
-
-![](img/tutorial_1.gif)
-
-By default, `Text` uses the "tb-8" font, but this can be overridden
-with the `font` parameter. You can read more about the available fonts
-[over here](fonts.md).
 
 ## Getting Bitcoin data
 
