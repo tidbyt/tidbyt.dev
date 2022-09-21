@@ -17,6 +17,8 @@ export default function CodeBlock({ inline, className, children }: Props) {
         return (
             <Box component={'codeblock'} sx={{
                 fontWeight: '500',
+                paddingLeft: '0.3rem',
+                paddingRight: '0.3rem',
                 fontFamily: 'monospace',
             }}>
                 {children}
