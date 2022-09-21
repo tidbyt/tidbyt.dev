@@ -17,7 +17,7 @@ export default function Image({ src, alt, title, children }: Props) {
                     <Paper
                         sx={{
                             borderRadius: 2,
-                            marginBottom: 4,
+                            marginTop: 4,
                             maxWidth: '100%',
                             height: 'auto',
                         }}

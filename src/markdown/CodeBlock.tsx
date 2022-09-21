@@ -39,7 +39,7 @@ export default function CodeBlock({ inline, className, children }: Props) {
     return (
         <Box sx={{ minWidth: '100%' }}>
             <Paper sx={{ borderRadius: 2, backgroundColor: solarized.base03 }}>
-                <Typography mt={0} mb={4} variant="body2">
+                <Typography mt={4} mb={0} variant="body2">
                     <SyntaxHighlighter
                         customStyle={{
                             background: 'none',
