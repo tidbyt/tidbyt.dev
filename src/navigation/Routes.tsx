@@ -5,6 +5,7 @@ import Main from '../main/Main';
 import Home from '../home/Home';
 import { getDocs } from './docs';
 import PublicAPI from '../publicapi/PublicAPI';
+import ScrollToTop from './ScrollToTop';
 
 
 export default function Routes() {
@@ -21,6 +22,7 @@ export default function Routes() {
 
     return (
         <BrowserRouter>
+            <ScrollToTop />
             <RouterRoutes>
                 <Route path="/" element={<Home />} />
                 <Route path="/docs/api" element={<PublicAPI />} />
