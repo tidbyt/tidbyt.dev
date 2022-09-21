@@ -40,7 +40,6 @@ export default function AppBar({ children, open }: Props) {
             <StyledAppBar position="fixed" open={open} elevation={0} sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, backgroundColor: solarized.base03 }}>
                 {children}
             </StyledAppBar>
-
         );
     }
 
