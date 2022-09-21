@@ -15,7 +15,7 @@ type Props = {
 export default function CodeBlock({ inline, className, children }: Props) {
     if (inline) {
         return (
-            <Box component={'codeblock'} sx={{
+            <Box component={'code'} sx={{
                 fontWeight: '500',
                 paddingLeft: '0.3rem',
                 paddingRight: '0.3rem',
