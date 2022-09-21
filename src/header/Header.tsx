@@ -52,8 +52,8 @@ export default function Header({ open, handleOpen }: Props) {
                 </IconButton>
                 <Box sx={{ flexGrow: 1 }} />
                 <Link to="/">
-                    <Box sx={{ display: { xs: 'flex', md: 'flex' }, height: "16px" }}>
-                        <Logo color={solarized.base1} />
+                    <Box sx={{ display: { xs: 'flex', md: 'flex' }, height: '16px' }}>
+                        <Logo color={solarized.base1} height='16px' />
                     </Box>
                 </Link>
                 <Box sx={{ flexGrow: 1 }} />
