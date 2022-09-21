@@ -15,21 +15,12 @@ type Props = {
 export default function CodeBlock({ inline, className, children }: Props) {
     if (inline) {
         return (
-            <SyntaxHighlighter
-                customStyle={{
-                    display: 'inline-block',
-                    padding: 'none',
-                    paddingLeft: '0.2em',
-                    paddingRight: '0.2em',
-                    overflowX: 'none',
-                    background: 'none',
-                    color: solarized.blue,
-                }}
-                language={'bash'}
-                children={String(children).replace(/\n$/, '')}
-                style={solarizedDark}
-                PreTag="code"
-            />
+            <Box component={'codeblock'} sx={{
+                fontWeight: '500',
+                fontFamily: 'monospace',
+            }}>
+                {children}
+            </Box>
         );
     }
 
@@ -45,11 +36,11 @@ export default function CodeBlock({ inline, className, children }: Props) {
 
     return (
         <Box sx={{ minWidth: '100%' }}>
-            <Paper sx={{ borderRadius: 2 }}>
+            <Paper sx={{ borderRadius: 2, backgroundColor: solarized.base03 }}>
                 <Typography mt={0} mb={4} variant="body2">
                     <SyntaxHighlighter
                         customStyle={{
-                            borderRadius: 20,
+                            background: 'none',
                         }}
                         children={String(children).replace(/\n$/, '')}
                         style={solarizedDark}

@@ -11,6 +11,7 @@ import {
 } from '@mui/material';
 
 import { Doc, cleanFolderName } from './docs';
+import { solarized } from '../theme/colors';
 
 
 type Props = {
@@ -43,7 +44,7 @@ export default function Folder({ title, docs, handleClose }: Props) {
         <React.Fragment>
             <List
                 subheader={
-                    <ListSubheader component="div" id="nested-list-subheader">
+                    <ListSubheader sx={{ backgroundColor: solarized.base03 }} component="div" id="nested-list-subheader">
                         {cleanFolderName(title)}
                     </ListSubheader>
                 }

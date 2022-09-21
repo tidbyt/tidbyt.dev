@@ -1,5 +1,5 @@
-
 import '@fontsource/barlow/400.css';
+import '@fontsource/barlow/500.css';
 import '@fontsource/barlow/700.css';
 import '@fontsource/material-icons';
 
@@ -22,7 +22,6 @@ export const theme = createTheme({
             secondary: solarized.base0,
         },
         background: {
-            paper: solarized.base03,
             default: solarized.base03,
         },
         divider: solarized.base01,

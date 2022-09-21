@@ -9,8 +9,8 @@ the [examples](../examples/), and then refer to the detailed Widget
 documentation (this document) when the need arises.
 
 A quick note about colors.  When specifying colors, use a CSS-like
-hexdecimal color specification.  Pixlet supports "#rgb", "#rrggbb",
-"#rgba", and "#rrggbbaa" color specifications.
+hexdecimal color specification.  Pixlet supports `#rgb`, `#rrggbb`,
+`#rgba`, and `#rrggbbaa` color specifications.
 
 ## Animation
 Animations turns a list of children into an animation, where each
