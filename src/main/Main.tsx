@@ -30,7 +30,7 @@ export default function Main({ source }: Props) {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <Header open={open} handleOpen={handleOpen} handleClose={handleClose} />
+            <Header open={open} handleOpen={handleOpen} />
             <Navigation open={open} handleOpen={handleOpen} handleClose={handleClose} />
             <Content open={open}>
                 <Container maxWidth="md">

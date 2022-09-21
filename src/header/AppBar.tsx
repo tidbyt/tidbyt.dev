@@ -9,11 +9,11 @@ import { drawerWidth } from '../content/Content';
 import { solarized } from '../theme/colors';
 
 type Props = {
-
-    disabled: boolean,
+    disabled?: boolean,
     open: boolean,
     children: JSX.Element,
 }
+
 const StyledAppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== 'open',
 })<AppBarProps>(({ theme, open }) => ({

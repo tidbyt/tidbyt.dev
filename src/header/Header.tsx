@@ -16,10 +16,8 @@ import { solarized } from '../theme/colors';
 
 
 type Props = {
-    transparent: boolean,
     open: boolean,
     handleOpen: () => void;
-    handleClose: () => void;
 }
 
 export default function Header({ open, handleOpen }: Props) {
