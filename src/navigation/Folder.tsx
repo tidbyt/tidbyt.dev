@@ -16,16 +16,17 @@ import { Doc, cleanFolderName } from './docs';
 type Props = {
     title: string,
     docs: Array<Doc>,
+    handleClose: () => void;
 }
 
-export default function Folder({ title, docs }: Props) {
+export default function Folder({ title, docs, handleClose }: Props) {
     function genFolderItems(): JSX.Element[] {
         let items: JSX.Element[] = [];
 
         docs.forEach((value) => (
             items.push(
                 <ListItem key={value.path} disablePadding>
-                    <ListItemButton>
+                    <ListItemButton onClick={handleClose}>
                         <Link style={{ color: "inherit", textDecoration: "inherit" }} to={value.url}>
                             <ListItemText primary={value.name} />
                         </Link>
