@@ -21,7 +21,6 @@ import ListWrapper from './list/ListWrapper';
 import Item from './list/Item';
 import Paragraph from './Paragraph';
 import { genURL, convertRelativePath } from '../navigation/docs';
-import { Divider } from '@mui/material';
 import HorizontalRule from './HorizontalRule';
 
 
@@ -35,7 +34,7 @@ export default function Markdown({ source }: Props) {
     return (
         <ReactMarkdown
             children={source}
-            transformLinkUri={(href, children, title) => {
+            transformLinkUri={(href: string) => {
                 if (href.startsWith('http')) {
                     return href;
                 }
@@ -43,7 +42,7 @@ export default function Markdown({ source }: Props) {
                 let path = convertRelativePath(href, location.pathname);
                 return genURL(path);
             }}
-            transformImageUri={(src, alt, title) => {
+            transformImageUri={(src: string) => {
                 return `/static/${src}`;
             }}
             remarkPlugins={[remarkGfm, remarkUnwrapImages]}

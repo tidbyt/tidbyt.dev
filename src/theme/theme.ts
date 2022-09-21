@@ -1,5 +1,6 @@
 
-import '@fontsource/barlow';
+import '@fontsource/barlow/400.css';
+import '@fontsource/barlow/700.css';
 import '@fontsource/material-icons';
 
 import { solarized } from './colors';
@@ -57,7 +58,7 @@ export const theme = createTheme({
             fontFamily: '"VisbyCFBold"',
         },
         body2: {
-            fontSize: "20px",
+            fontSize: "1.3rem",
         }
     },
 });
