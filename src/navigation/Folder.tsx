@@ -25,13 +25,13 @@ export default function Folder({ title, docs, handleClose }: Props) {
 
         docs.forEach((value) => (
             items.push(
-                <ListItem key={value.path} disablePadding>
-                    <ListItemButton onClick={handleClose}>
-                        <Link style={{ color: "inherit", textDecoration: "inherit" }} to={value.url}>
+                <Link style={{ color: "inherit", textDecoration: "inherit" }} to={value.url}>
+                    <ListItem key={value.path} disablePadding>
+                        <ListItemButton onClick={handleClose}>
                             <ListItemText primary={value.name} />
-                        </Link>
-                    </ListItemButton>
-                </ListItem>
+                        </ListItemButton>
+                    </ListItem>
+                </Link>
             )
         ));
 

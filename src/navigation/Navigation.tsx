@@ -36,11 +36,11 @@ export default function Navigation({ open, handleOpen, handleClose }: Props) {
 
     let dirs = getDirs();
 
-    function genFolders(): JSX.Element[] {
+    function genFolders(close: () => void): JSX.Element[] {
         let folders: JSX.Element[] = [];
 
         dirs.forEach((value, key) => (
-            folders.push(<Folder key={key} title={key} docs={value} handleClose={handleClose} />)
+            folders.push(<Folder key={key} title={key} docs={value} handleClose={close} />)
         ));
 
         return folders;
@@ -49,6 +49,11 @@ export default function Navigation({ open, handleOpen, handleClose }: Props) {
     let variant: DrawerProps["variant"] = 'temporary';
     if (desktop) {
         variant = 'persistent';
+    }
+
+    let close = handleClose;
+    if (desktop) {
+        close = () => { };
     }
 
     return (
@@ -64,7 +69,7 @@ export default function Navigation({ open, handleOpen, handleClose }: Props) {
             variant={variant}
             anchor="left"
             open={open}
-            onClose={handleClose}
+            onClose={close}
         >
             <DrawerHeader>
                 <IconButton onClick={handleClose}>
@@ -72,7 +77,7 @@ export default function Navigation({ open, handleOpen, handleClose }: Props) {
                 </IconButton>
             </DrawerHeader>
             <Divider />
-            {genFolders()}
+            {genFolders(close)}
         </Drawer>
     );
 }
