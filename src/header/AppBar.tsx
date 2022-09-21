@@ -6,6 +6,7 @@ import { AppBarProps } from '@mui/material/AppBar';
 import { AppBar as MuiAppBar, styled } from '@mui/material';
 
 import { drawerWidth } from '../content/Content';
+import { solarized } from '../theme/colors';
 
 type Props = {
 
@@ -36,7 +37,7 @@ export default function AppBar({ children, open }: Props) {
 
     if (desktop) {
         return (
-            <StyledAppBar position="fixed" open={open} color="background" elevation={0} sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
+            <StyledAppBar position="fixed" open={open} elevation={0} sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, backgroundColor: solarized.base03 }}>
                 {children}
             </StyledAppBar>
 
@@ -44,7 +45,7 @@ export default function AppBar({ children, open }: Props) {
     }
 
     return (
-        <MuiAppBar position="fixed" open={open} color="background" elevation={0}>
+        <MuiAppBar position="fixed" sx={{ backgroundColor: solarized.base03 }} elevation={0}>
             {children}
         </MuiAppBar >
     )

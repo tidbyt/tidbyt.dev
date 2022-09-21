@@ -14,6 +14,7 @@ import {
 import { getDirs } from './docs';
 import Folder from './Folder';
 import { drawerWidth } from '../content/Content';
+import { solarized } from '../theme/colors';
 
 type Props = {
     open: boolean,
@@ -61,6 +62,7 @@ export default function Navigation({ open, handleOpen, handleClose }: Props) {
             sx={{
                 width: drawerWidth,
                 flexShrink: 0,
+                backgroundColor: solarized.base03,
                 '& .MuiDrawer-paper': {
                     width: drawerWidth,
                     boxSizing: 'border-box',
@@ -70,6 +72,11 @@ export default function Navigation({ open, handleOpen, handleClose }: Props) {
             anchor="left"
             open={open}
             onClose={close}
+            PaperProps={{
+                sx: {
+                    backgroundColor: solarized.base03,
+                }
+            }}
         >
             <DrawerHeader>
                 <IconButton onClick={handleClose}>
@@ -78,6 +85,6 @@ export default function Navigation({ open, handleOpen, handleClose }: Props) {
             </DrawerHeader>
             <Divider />
             {genFolders(close)}
-        </Drawer>
+        </Drawer >
     );
 }
