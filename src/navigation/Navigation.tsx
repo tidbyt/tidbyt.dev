@@ -1,26 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import ChevronLeft from '@mui/icons-material/ChevronLeft';
-
-import Folder from './Folder'
-
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import {
     Drawer,
     IconButton,
     styled,
-    List,
-    ListItem,
-    ListItemButton,
-    ListSubheader,
-    ListItemText,
     Divider,
+    DrawerProps,
 } from '@mui/material';
-import { getDirs } from './docs';
 
-const drawerWidth = 240;
+import { getDirs } from './docs';
+import Folder from './Folder';
+import { drawerWidth } from '../content/Content';
 
 type Props = {
     open: boolean,
@@ -47,13 +40,13 @@ export default function Navigation({ open, handleOpen, handleClose }: Props) {
         let folders: JSX.Element[] = [];
 
         dirs.forEach((value, key) => (
-            folders.push(<Folder key={key} title={key} docs={value} />)
+            folders.push(<Folder key={key} title={key} docs={value} handleClose={handleClose} />)
         ));
 
         return folders;
     }
 
-    let variant = 'temporary';
+    let variant: DrawerProps["variant"] = 'temporary';
     if (desktop) {
         variant = 'persistent';
     }
@@ -71,6 +64,7 @@ export default function Navigation({ open, handleOpen, handleClose }: Props) {
             variant={variant}
             anchor="left"
             open={open}
+            onClose={handleClose}
         >
             <DrawerHeader>
                 <IconButton onClick={handleClose}>
