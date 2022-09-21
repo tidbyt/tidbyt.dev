@@ -1,4 +1,4 @@
-# Getting Started
+# Build for Tidbyt 
 
 To build apps for Tidbyt, use [Pixlet](./02_installing_pixlet.md). Apps developed with
 Pixlet can be served in a browser or pushed to a physical Tidbyt device.

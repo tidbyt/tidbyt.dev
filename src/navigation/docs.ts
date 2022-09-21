@@ -78,13 +78,13 @@ export function genName(path: string): string {
     let parts = path.split("/");
     let fileName = parts[parts.length - 1].replace('.md', '');
     let removeSort = fileName.replace(/\d\d_/g, '');
-    let name = titleCase(removeSort.replace(/_/, ' '));
+    let name = titleCase(removeSort.replace(/_/g, ' '));
     return name;
 }
 
 export function cleanFolderName(name: string): string {
     let removeSort = name.replace(/\d\d_/g, '');
-    return titleCase(removeSort.replace(/_/, ' '));
+    return titleCase(removeSort.replace(/_/g, ' '));
 }
 
 export function titleCase(input: string): string {
