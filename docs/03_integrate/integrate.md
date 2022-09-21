@@ -25,7 +25,7 @@ control your device, so be careful sharing it!
 
 To "push" the Bitcoin graphic to your Tidbyt, run:
 
-`pixlet push --api-token <YOUR API TOKEN HERE> <YOUR DEVICE ID HERE> examples/bitcoin.webp`
+`pixlet push --api-token "<API TOKEN>" "<DEVICE ID>" examples/bitcoin.webp`
 
 If all goes well, you should see the Bitcoin tracker appear on your Tidbyt:
 
@@ -44,25 +44,29 @@ device, using these configuration options". The device will rotate
 between displaying installations one at a time.
 
 When pushing a graphic, you can instruct Pixlet to create an
-installation for you. This means the graphic will enter the regular
-rotation of apps, and become visible among them in the Tidbyt
-iOS/Android app. In the screenshot below, you'll see the pushed
-bitcoin installation on the right hand side.
+installation for you:
+
+`pixlet push --installation-id bitcoin --api-token "<API TOKEN>" "<DEVICE ID>" examples/bitcoin.webp`
+
+This means the graphic will enter the regular rotation of apps, and
+become visible among them in the Tidbyt iOS/Android app. In the
+screenshot below, you'll see the pushed bitcoin installation on the
+right hand side.
 
 ![A pushed installation alongside a regular installation in the Tidbyt smartphone app.](img/integrate_pushed_installation.png)
 
 Keep in mind though, the graphic associated with the installation will
 only change if you push a new one. If you really want to stay up to
 speed on the price of Bitcoin, you'll have to either keep pushing the
-graphic, or look into [../04_publish/publish.md](publishing your
-app). =)
+graphic, or look into [publishing your
+app](../04_publish/publish.md). =)
 
 ## The Tidbyt API
 
 Behind the scenes, the `pixlet push` command reaches out to Tidbyt's
 servers via the Tidbyt API. But pushing graphics isn't all the API is
 good for. For instance, try the following in your terminal (requires
-you have `curl` installed!):
+you have `curl` installed):
 
 `curl "https://api.tidbyt.com/v0/apps"`
 
@@ -88,9 +92,6 @@ look something like this:
 There are several endpoints available in the API, and you can read
 about them all in the [API Reference](). Most of them require passing
 in an API Token, so here's an example of how that works.
-
-
-Armed with your Device ID and API Token, try running this:
 
 `curl -H "Authorization: Bearer <API Token HERE>" https://api.tidbyt.com/v0/devices/<Device ID HERE>`
 
