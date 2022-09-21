@@ -7,7 +7,7 @@ Tidbyt API.
 
 ## Pixlet Push
 
-Let's say you've [built](../02_build/build.md) a beautiful bitcoin
+Let's say you've [built](../build/getting-started) a beautiful bitcoin
 tracker located in `examples/bitcoin.star`. You can easily render this
 to a webp image using pixlet:
 
