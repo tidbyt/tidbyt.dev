@@ -40,21 +40,27 @@ export const theme = createTheme({
         ].join(','),
         h1: {
             fontFamily: '"VisbyCFBold"',
+            fontSize: '4.5rem',
         },
         h2: {
             fontFamily: '"VisbyCFBold"',
+            fontSize: '3.2rem',
         },
         h3: {
             fontFamily: '"VisbyCFBold"',
+            fontSize: '2.4rem',
         },
         h4: {
             fontFamily: '"VisbyCFBold"',
+            fontSize: '1.3rem',
         },
         h5: {
             fontFamily: '"VisbyCFBold"',
+            fontSize: '1.3rem',
         },
         h6: {
             fontFamily: '"VisbyCFBold"',
+            fontSize: '1.3rem',
         },
         body2: {
             fontSize: "1.3rem",

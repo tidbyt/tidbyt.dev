@@ -11,7 +11,9 @@ Let's say you've [built](../build/getting-started) a beautiful bitcoin
 tracker located in `examples/bitcoin.star`. You can easily render this
 to a webp image using pixlet:
 
-`pixlet render examples/bitcoin.star`
+```
+pixlet render examples/bitcoin.star
+```
 
 To get the resulting webp displayed on your Tidbyt, you need two
 pieces of information: your _Device ID_ and your _API Token_. Both of
@@ -25,7 +27,9 @@ control your device, so be careful sharing it!
 
 To "push" the Bitcoin graphic to your Tidbyt, run:
 
-`pixlet push --api-token "<API TOKEN>" "<DEVICE ID>" examples/bitcoin.webp`
+```
+pixlet push --api-token "<API TOKEN>" "<DEVICE ID>" examples/bitcoin.webp
+```
 
 If all goes well, you should see the Bitcoin tracker appear on your Tidbyt:
 
@@ -46,7 +50,9 @@ between displaying installations one at a time.
 When pushing a graphic, you can instruct Pixlet to create an
 installation for you:
 
-`pixlet push --installation-id bitcoin --api-token "<API TOKEN>" "<DEVICE ID>" examples/bitcoin.webp`
+```
+pixlet push --installation-id bitcoin --api-token "<API TOKEN>" "<DEVICE ID>" examples/bitcoin.webp
+```
 
 This means the graphic will enter the regular rotation of apps, and
 become visible among them in the Tidbyt iOS/Android app. In the
@@ -68,7 +74,9 @@ servers via the Tidbyt API. But pushing graphics isn't all the API is
 good for. For instance, try the following in your terminal (requires
 you have `curl` installed):
 
-`curl "https://api.tidbyt.com/v0/apps"`
+```
+curl "https://api.tidbyt.com/v0/apps"
+```
 
 You should see a long list of all the available Tidbyt apps. It'll
 look something like this:
@@ -93,7 +101,9 @@ There are several endpoints available in the API, and you can read
 about them all in the [API Reference](). Most of them require passing
 in an API Token, so here's an example of how that works.
 
-`curl -H "Authorization: Bearer <API Token HERE>" https://api.tidbyt.com/v0/devices/<Device ID HERE>`
+```
+curl -H "Authorization: Bearer <API Token HERE>" https://api.tidbyt.com/v0/devices/<Device ID HERE>
+```
 
 In return, you should get a json object with information about your device. It'll look something like this:
 
@@ -108,6 +118,6 @@ In return, you should get a json object with information about your device. It'l
 
 The key component of that command line is the `-H` flag. Make sure to
 included when performing requests to endpoints that require
-autentication!
+authentication!
 
 That's pretty much all there's too it. Now go forth and build a thing!

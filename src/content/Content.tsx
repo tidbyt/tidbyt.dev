@@ -25,8 +25,8 @@ const Shifted = styled(Box, { shouldForwardProp: (prop) => prop !== 'open' })<{
 }));
 
 type Props = {
-    disabled: boolean,
-    open: boolean,
+    disabled?: boolean,
+    open?: boolean,
     children: JSX.Element,
 }
 
@@ -43,8 +43,11 @@ export default function Content({ open, children }: Props) {
     }
 
     return (
-        <Shifted open={false}>
+        <Box sx={{
+            flexGrow: 1,
+            padding: theme.spacing(3),
+        }}>
             {children}
-        </Shifted>
+        </Box>
     );
 }

@@ -26,8 +26,8 @@ export default function Folder({ title, docs, handleClose }: Props) {
 
         docs.forEach((value) => (
             items.push(
-                <Link style={{ color: "inherit", textDecoration: "inherit" }} to={value.url}>
-                    <ListItem key={value.path} disablePadding>
+                <Link key={value.path} style={{ color: "inherit", textDecoration: "inherit" }} to={value.url}>
+                    <ListItem disablePadding>
                         <ListItemButton onClick={handleClose}>
                             <ListItemText primary={value.name} />
                         </ListItemButton>

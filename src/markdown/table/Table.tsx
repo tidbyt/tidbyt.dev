@@ -8,7 +8,7 @@ type Props = {
 
 export default function Table({ children }: Props) {
     return (
-        <TableContainer sx={{ marginTop: 4 }} component={Paper}>
+        <TableContainer sx={{ marginTop: 4, borderRadius: 2 }} component={Paper}>
             <MuiTable>
                 {children}
             </MuiTable>

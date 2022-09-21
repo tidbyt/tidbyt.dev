@@ -22,10 +22,8 @@ export default function Heading({ level, children }: Props) {
 
     function calcMarginBottom(level: number): number {
         switch (level) {
-            case 1:
-                return 0;
             default:
-                return -4;
+                return 0;
         }
     }
 

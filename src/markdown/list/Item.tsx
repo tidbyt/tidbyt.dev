@@ -21,7 +21,7 @@ export default function Item({ index, ordered, children }: Props) {
     }
 
     return (
-        <ListItem key={index}>
+        <ListItem sx={{ display: 'block' }} key={index}>
             <Typography component="span" variant="body2">
                 <CircleIcon sx={{ fontSize: 10, color: '#000', paddingRight: 1 }} />
                 {children}

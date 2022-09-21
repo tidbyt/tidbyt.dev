@@ -61,11 +61,8 @@ export default function Navigation({ open, handleOpen, handleClose }: Props) {
         <Drawer
             sx={{
                 width: drawerWidth,
-                flexShrink: 0,
-                backgroundColor: solarized.base03,
                 '& .MuiDrawer-paper': {
                     width: drawerWidth,
-                    boxSizing: 'border-box',
                 },
             }}
             variant={variant}
