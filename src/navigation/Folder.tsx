@@ -41,7 +41,7 @@ export default function Folder({ title, docs, handleClose }: Props) {
                 <Link key='/docs/api' style={{ color: "inherit", textDecoration: "inherit" }} to='/docs/api'>
                     <ListItem disablePadding>
                         <ListItemButton onClick={handleClose}>
-                            <ListItemText primary='Public API' />
+                            <ListItemText primary='API Operations' />
                         </ListItemButton>
                     </ListItem>
                 </Link>
