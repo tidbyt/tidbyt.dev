@@ -64,11 +64,11 @@ it, or even push it to a Tidbyt device with `pixlet push`.
 
 * Read the [in-depth tutorial on building a more advanced app](./15_crypto-tracker.md).
 * See our [best practices for authoring apps](./05_authoring_apps.md).
-* Check out the references for the [**widgets**](../05_reference/widgets.md)
-  and [**modules**](../05_reference/modules.md) you can use in.
+* Check out the references for the [**widgets**](../06_reference/widgets.md)
+  and [**modules**](../06_reference/modules.md) you can use in.
 * Learn about [fonts you can use in Pixlet apps](./07_fonts_in_pixlet.md).
 
 ### Publish your app
 
 Once you've got an app that's looking spiffy, you can
-[publish and share it with the community](../04_publish/publish.md).
+[publish and share it with the community](../04_publish/01_community_apps.md).

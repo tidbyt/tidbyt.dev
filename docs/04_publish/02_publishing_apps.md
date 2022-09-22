@@ -1,7 +1,7 @@
 # Publishing Apps
 So pumped you're here and want to publish an app! If you haven't done so already, check out our [code of conduct](../05_engage/02_code_of_conduct.md) and the overview on [community apps](./01_community_apps.md) to get a better sense of what you're getting yourself into. You'll also want to check out the guide on [authoring apps](../02_build/05_authoring_apps.md) to get a better sense of how everything works together.
 
-One final note before we hop in - you may want to check out the [schema docs](../05_reference/schema/schema.md) if you haven't already. Schema allows you to display options inside of the Tidbyt mobile app so the user can configure your starlark applet.
+One final note before we hop in - you may want to check out the [schema docs](../06_reference/schema.md) if you haven't already. Schema allows you to display options inside of the Tidbyt mobile app so the user can configure your starlark applet.
 
 ## Prerequisites
 Make sure you have [go1.16](https://go.dev/) or later and `make` installed on your system.

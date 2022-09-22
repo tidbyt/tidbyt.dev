@@ -109,7 +109,7 @@ perhaps not so much. We can instruct `Row` to use as much horizontal
 space as possible by passing `expanded=True`, and then use the
 `main_align` and `cross_align` parameters to adjust how the children
 are spaced out. For details on these parameters, check out the full
-[Widget reference](widgets.md).
+[Widget reference](../06_reference/widgets.md).
 
 We'll also place the `Row` itself in a `Box` to ensure that it's
 placed in the vertical center of the screen. `Box` actually centers
@@ -228,4 +228,4 @@ we'd see a cache miss as the old record has expired.
 
 ## What's next?
 
-Take a look at the guide on [authoring apps](./02_authoring_apps.md), the [Widget reference](../05_reference/widgets.md), and start hacking!
+Take a look at the guide on [authoring apps](./02_authoring_apps.md), the [Widget reference](../06_reference/widgets.md), and start hacking!

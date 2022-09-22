@@ -5,7 +5,7 @@ describe how data should be laid out, presented and finally rendered
 to an image file.
 
 The easiest way to get started is probably to take a look at some of
-the [examples](../examples/), and then refer to the detailed Widget
+the [examples](https://github.com/tidbyt/pixlet/tree/main/examples), and then refer to the detailed Widget
 documentation (this document) when the need arises.
 
 A quick note about colors.  When specifying colors, use a CSS-like
@@ -16,7 +16,7 @@ hexdecimal color specification.  Pixlet supports `#rgb`, `#rrggbb`,
 Animations turns a list of children into an animation, where each
 child is a frame.
 
-FIXME: Behaviour when children themselves are animated is a bit
+FIXME: Behavior when children themselves are animated is a bit
 weird. Think and fix.
 
 #### Attributes
