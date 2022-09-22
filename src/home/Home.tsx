@@ -29,7 +29,7 @@ export default function Home() {
 
     return (
         <Box sx={{ flexGrow: 1, backgroundColor: solarized.base03 }}>
-            <Header transparent={false} open={open} handleOpen={handleOpen} handleClose={handleClose} />
+            <Header open={open} handleOpen={handleOpen} handleClose={handleClose} />
             <Navigation open={open} handleOpen={handleOpen} handleClose={handleClose} />
             <Box
                 display="flex"
@@ -56,7 +56,7 @@ export default function Home() {
                                 <Highlight href="/docs/build/build-for-tidbyt" heading="Build" desc="Build an app for your Tidbyt" icon={<Handyman sx={{ fontSize: 48 }} />} />
                             </Grid>
                             <Grid item xs={12} md={6}>
-                                <Highlight href="/docs/publish/publish" heading="Publish" desc="Publish your app for all Tidbyt users" icon={<RocketLaunch sx={{ fontSize: 48 }} />} />
+                                <Highlight href="/docs/publish/community-apps" heading="Publish" desc="Publish your app for all Tidbyt users" icon={<RocketLaunch sx={{ fontSize: 48 }} />} />
                             </Grid>
                             <Grid item xs={12} md={6}>
                                 <Highlight href="/docs/integrate/integrate" heading="Integrate" desc="Integrate with the Tidbyt API" icon={<Autorenew sx={{ fontSize: 48 }} />} />

@@ -88,9 +88,14 @@ export function cleanFolderName(name: string): string {
 }
 
 export function titleCase(input: string): string {
+    if (input.toUpperCase() === input) {
+        return input;
+    }
+
     let str = input.toLowerCase().split(' ');
     for (let i = 0; i < str.length; i++) {
         str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
     }
+
     return str.join(' ');
 }
