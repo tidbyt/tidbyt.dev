@@ -12,10 +12,11 @@ import { Container, Box, Toolbar } from '@mui/material';
 
 
 type Props = {
-    source: string,
+    source?: string,
+    children?: JSX.Element
 }
 
-export default function Main({ source }: Props) {
+export default function Main({ source, children }: Props) {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up('sm'));
     const [open, setOpen] = useState(matches);
@@ -36,6 +37,7 @@ export default function Main({ source }: Props) {
             <Content open={open}>
                 <Container maxWidth="md">
                     <Markdown source={source} />
+                    {children}
                 </Container>
             </Content>
             <Box height="80px" />

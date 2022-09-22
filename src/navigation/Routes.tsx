@@ -25,7 +25,7 @@ export default function Routes() {
             <ScrollToTop />
             <RouterRoutes>
                 <Route path="/" element={<Home />} />
-                <Route path="/docs/api" element={<PublicAPI />} />
+                <Route path="/docs/api" element={<Main ><PublicAPI /></Main>} />
                 {genRoutes()}
             </RouterRoutes>
         </BrowserRouter>
