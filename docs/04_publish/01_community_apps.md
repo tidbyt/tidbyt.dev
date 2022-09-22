@@ -1,4 +1,4 @@
-# Publish
+# Community Apps
 
 Did you know that the vast majority of Tidbyt apps are contributed by
 other users and community members? When you browse the Tidbyt
@@ -35,9 +35,8 @@ app has been deemed "good to go", it is then released to all other
 Tidbyt users. If you want to sign up to become a beta tester, you can
 do so [here](https://forms.gle/zGqUyCv9kUh6YUic9).
 
-For the nitty gritty on how to get a new app published,
-head over to [the docs in the community
-repo](https://github.com/tidbyt/community/blob/main/docs/guides/publishing_apps.md).
+For the nitty gritty on how to get a new app published, check out
+[Publishing Apps](./02_publishing_apps.md)
 
 ### How to pass a review
 
@@ -70,11 +69,11 @@ At the end of the day, Tidbyt employees will be the ones who will have
 to resolve production issues and respond to support emails. This means
 a few things:
 
-Apps need to use a stable API
+Apps need to use a stable API:
 - An API hosted on your home network simply won't do
 - Any failures will surface in our monitoring tools and alert our oncalls
 
-Apps published should be stable
+Apps published should be stable:
 - If there are bugs, we will make changes quickly and will likely not wait for your review
 - If they are unresolvable, we may have to pull the app from our inventory until we get ahold of you
 
