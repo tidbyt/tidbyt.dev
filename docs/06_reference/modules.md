@@ -83,13 +83,12 @@ The `humanize` module has formatters for units to human friendly sizes.
 | `plural_word(quantity, singular, plural?)` | Builds the plural form of an English word. The simple English rules of regular pluralization will be used if the plural form is an empty string (i.e. not explicitly given). |
 | `word_series(words, conjunction)` | Converts a list of words into a word series in English. It returns a string containing all the given words separated by commas, the coordinating conjunction, and a serial comma, as appropriate. |
 | `oxford_word_series(words, conjunction)` | Converts a list of words into a word series in English, using an [Oxford comma](https://en.wikipedia.org/wiki/Serial_comma). It returns a string containing all the given words separated by commas, the coordinating conjunction, and a serial comma, as appropriate. |
-
 | `url_encode(str)` | Escapes the string so it can be safely placed inside a URL query. |
 | `url_decode(str)` | The inverse of `url_encode`. Converts each 3-byte encoded substring of the form "%AB" into the hex-decoded byte 0xAB |
 
 Example:
 
-See [examples/humanize.star](../examples/humanize.star) for an example.
+See [examples/humanize.star](https://github.com/tidbyt/pixlet/blob/dc0f876089bb44a28653eba46e8182805944b782/examples/humanize.star) for an example.
 
 ## Pixlet module: XPath
 
@@ -130,7 +129,7 @@ def get_bars():
 
 The `render.star` module is where Pixlet's Widgets live. All of them
 are documented in a fair bit of detail in the [widget
-documentation](widgets.md).
+documentation](./widgets.md).
 
 Example:
 
@@ -142,11 +141,11 @@ def main():
 
 ## Pixlet module: Schema
 
-The schema module provides configuration options for your app. See the [schema documentation](schema/schema.md) for more details.
+The schema module provides configuration options for your app. See the [schema documentation](./schema.md) for more details.
 
 Example:
 
-See [examples/schema_hello_world.star](../examples/schema_hello_world.star) for an example.
+See [examples/schema_hello_world.star](https://github.com/tidbyt/pixlet/blob/dc0f876089bb44a28653eba46e8182805944b782/examples/schema_hello_world.star) for an example.
 
 ## Pixlet module: Secret
 
@@ -177,7 +176,7 @@ The `sunrise` module calculates sunrise and sunset times for a given set of GPS 
 
 Example:
 
-See [examples/sunrise.star](../examples/sunrise.star) for an example.
+See [examples/sunrise.star](https://github.com/tidbyt/pixlet/blob/dc0f876089bb44a28653eba46e8182805944b782/examples/sunrise.star) for an example.
 
 ## Pixlet module: Random
 

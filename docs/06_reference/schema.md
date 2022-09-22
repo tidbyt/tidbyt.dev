@@ -73,8 +73,8 @@ Pixlet offers two types of fields: basic fields like `Toggle` or `Text` and dyna
 These are the current fields we support through schema today. Note that any addition of a field will require changes in our mobile app before we can truly support them.
 
 ### Datetime
-![datetime example](datetime/datetime.gif)
-> [Example App](datetime/example.star)
+![datetime example](img/schema/datetime/datetime.gif)
+> [Example App](https://github.com/tidbyt/pixlet/blob/dc0f876089bb44a28653eba46e8182805944b782/docs/schema/datetime/example.star)
 
 Datetime provides a picker for a date and time. It is provided in `config` as a string that is parsable by `time.parse_time()`.
 
@@ -88,7 +88,8 @@ schema.DateTime(
 ```
 
 ### Dropdown
-![dropdown example](dropdown/dropdown.gif)
+![dropdown example](img/schema/dropdown/dropdown.gif)
+> [Example App](https://github.com/tidbyt/pixlet/blob/dc0f876089bb44a28653eba46e8182805944b782/docs/schema/dropdown/example.star)
 
 A dropdown provides a selection from a list of options. Options are a key/value pair where the display is the text displayed in the mobile app and the value is what is returned in `config` to the starlark app.
 
@@ -119,7 +120,7 @@ schema.Dropdown(
 ```
 
 ### Generated
-> [Example App](generated/example.star)
+> [Example App](https://github.com/tidbyt/pixlet/blob/dc0f876089bb44a28653eba46e8182805944b782/docs/schema/generated/example.star)
 
 The generated field allows for a schema field to generate additional schema
 fields 🤯. User beware - this field is both not user friendly and our tooling
@@ -168,8 +169,8 @@ def more_options(pet):
 ```
 
 ### Location
-![location example](location/location.gif)
-> [Example App](location/example.star)
+![location example](img/schema/location/location.gif)
+> [Example App](https://github.com/tidbyt/pixlet/blob/dc0f876089bb44a28653eba46e8182805944b782/docs/schema/location/example.star)
 
 A location field provides a location selection option inside of the mobile app. It's populated with the devices location. Note - if you're adding location to your app and want to call external APIs with this data, we will ask you to truncate the location to avoid leaking location data to third-parties.
 
@@ -195,8 +196,8 @@ When you get location using `config.get("location")`, we will return the locatio
 ```
 
 ### LocationBased
-![locationbased example](locationbased/locationbased.gif)
-> [Example App](locationbased/example.star)
+![locationbased example](img/schema/locationbased/locationbased.gif)
+> [Example App](https://github.com/tidbyt/pixlet/blob/dc0f876089bb44a28653eba46e8182805944b782/docs/schema/locationbased/example.star)
 
 A `LocationBased` field provides a list of `Option` objects to the user by calling a handler method with the user provided location. This field can be used to populate a list of options based on the location provided by the user.
 
@@ -241,8 +242,8 @@ The value provided to `config.get()` is a JSON string with display and values pr
 ```
 
 ### OAuth2
-![oauth2 example](oauth2/oauth2.gif)
-> [Example App](oauth2/example.star)
+![oauth2 example](img/schema/oauth2/oauth2.gif)
+> [Example App](https://github.com/tidbyt/pixlet/blob/dc0f876089bb44a28653eba46e8182805944b782/docs/schema/oauth2/example.star)
 
 The `OAuth2` field provides mechanism to authenticate a user via an OAuth2 compatible API. 
 
@@ -280,8 +281,8 @@ https://appauth.tidbyt.com/{{ your_app_id }}
 ```
 
 ### PhotoSelect
-![photoselect example](photoselect/photoselect.gif)
-> [Example App](photoselect/example.star)
+![photoselect example](img/schema/photoselect/photoselect.gif)
+> [Example App](https://github.com/tidbyt/pixlet/blob/dc0f876089bb44a28653eba46e8182805944b782/docs/schema/photoselect/example.star)
 
 The `PhotoSelect` field provides a photo picker to the user. The selected image will be cropped to 64x32 pixels and be available through `config` as a base64 encoded string.
 
@@ -301,8 +302,8 @@ render.Image(img)
 ```
 
 ### Text
-![text example](text/text.gif)
-> [Example App](text/example.star)
+![text example](img/schema/text/text.gif)
+> [Example App](https://github.com/tidbyt/pixlet/blob/dc0f876089bb44a28653eba46e8182805944b782/docs/schema/text/example.star)
 
 The `Text` field provides a text entry box for a string entered by the user.
 
@@ -317,8 +318,8 @@ schema.Text(
 ```
 
 ### Toggle
-![toggle example](toggle/toggle.gif)
-> [Example App](toggle/example.star)
+![toggle example](img/schema/toggle/toggle.gif)
+> [Example App](https://github.com/tidbyt/pixlet/blob/dc0f876089bb44a28653eba46e8182805944b782/docs/schema/toggle/example.star)
 
 A toggle provides an on/off switch for your app. The values returned in `config` are either `True` or `False`. Remember to use `config.bool()` to ensure the results are cast to a boolean.
 
@@ -338,8 +339,8 @@ config.bool("party_mode", False)
 ```
 
 ### Typeahead
-![typeahead example](typeahead/typeahead.gif)
-> [Example App](typeahead/example.star)
+![typeahead example](img/schema/typeahead/typeahead.gif)
+> [Example App](https://github.com/tidbyt/pixlet/blob/dc0f876089bb44a28653eba46e8182805944b782/docs/schema/typeahead/example.star)
 
 The `Typeahead` field provides a list of options based on user input. 
 

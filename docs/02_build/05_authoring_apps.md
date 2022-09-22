@@ -89,7 +89,7 @@ For example, if your app receives an error from an external API, try these optio
 [1]: https://github.com/bazelbuild/starlark/blob/master/spec.md#fail
 [2]: https://github.com/bazelbuild/starlark/blob/master/spec.md#print
 [3]: https://github.com/tidbyt/community
-[4]: schema/schema.md
+[4]: ../06_reference/schema.md
 
 ## Performance profiling
 

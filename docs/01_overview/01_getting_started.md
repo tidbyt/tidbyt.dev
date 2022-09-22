@@ -11,8 +11,8 @@ build on, publish apps for, and integrate with your own scripts:
 
 * [Build your own pixel-based apps](../02_build/01_build_for_tidbyt.md) to display
   on the Tidbyt.
-* [Publish and share your apps](../04_publish/publish.md) with the Tidbyt community.
-* [Integrate with Tidbyt's API](../03_integrate/integrate.md) to connect your Tidbyt to existing systems and workflows.
+* [Publish and share your apps](../04_publish/01_community_apps.md) with the Tidbyt community.
+* [Integrate with Tidbyt's API](../03_integrate/02_building_integrations.md) to connect your Tidbyt to existing systems and workflows.
 
 
 #### Engage with the community
