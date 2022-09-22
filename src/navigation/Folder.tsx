@@ -36,6 +36,19 @@ export default function Folder({ title, docs, handleClose }: Props) {
             )
         ));
 
+        if (cleanFolderName(title) === 'Integrate') {
+            items.push(
+                <Link key='/docs/api' style={{ color: "inherit", textDecoration: "inherit" }} to='/docs/api'>
+                    <ListItem disablePadding>
+                        <ListItemButton onClick={handleClose}>
+                            <ListItemText primary='Public API' />
+                        </ListItemButton>
+                    </ListItem>
+                </Link>
+
+            )
+        }
+
         return items;
     }
 
