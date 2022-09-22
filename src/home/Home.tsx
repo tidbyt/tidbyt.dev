@@ -62,7 +62,7 @@ export default function Home() {
                                 <Highlight href="/docs/integrate/integrate" heading="Integrate" desc="Integrate with the Tidbyt API" icon={<Autorenew sx={{ fontSize: 48 }} />} />
                             </Grid>
                             <Grid item xs={12} md={6}>
-                                <Highlight href="/docs/overview/overview" heading="Engage" desc="Learn from the Tidbyt Community" icon={<Forum sx={{ fontSize: 48 }} />} />
+                                <Highlight href="/docs/engage/community" heading="Engage" desc="Learn from the Tidbyt Community" icon={<Forum sx={{ fontSize: 48 }} />} />
                             </Grid>
                             <Grid item xs={12} display={{ xs: "block", md: "none" }}>
                                 <Box height="80px" />
