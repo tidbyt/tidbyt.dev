@@ -1,4 +1,5 @@
 # Tidbyt | Dev
+[![Docs](https://img.shields.io/badge/docs-tidbyt.dev-blue?style=flat-square)](https://tidbyt.dev)
 [![Netlify Status](https://img.shields.io/netlify/fd7e22f8-e8c9-4caa-ab53-37474eb49bc4?style=flat-square)](https://app.netlify.com/sites/tidbyt-dev/deploys)
 [![Discourse](https://img.shields.io/discourse/status?server=https%3A%2F%2Fdiscuss.tidbyt.com&style=flat-square)](https://discuss.tidbyt.com/)
 [![Discord Server](https://img.shields.io/discord/928484660785336380?style=flat-square)](https://discord.gg/r45MXG4kZc)
