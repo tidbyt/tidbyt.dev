@@ -1,7 +1,11 @@
 # Tidbyt | Dev
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fd7e22f8-e8c9-4caa-ab53-37474eb49bc4/deploy-status)](https://app.netlify.com/sites/tidbyt-dev/deploys)
+[![Netlify Status](https://img.shields.io/netlify/fd7e22f8-e8c9-4caa-ab53-37474eb49bc4?style=flat-square)](https://app.netlify.com/sites/tidbyt-dev/deploys)
+[![Discourse](https://img.shields.io/discourse/status?server=https%3A%2F%2Fdiscuss.tidbyt.com&style=flat-square)](https://discuss.tidbyt.com/)
+[![Discord Server](https://img.shields.io/discord/928484660785336380?style=flat-square)](https://discord.gg/r45MXG4kZc)
 
 Welcome to the source for [tidbyt.dev](https://tidbyt.dev) 🎉. This repo contains a [React](https://reactjs.org/) project that converts a tree of [GitHub Flavored Markdown](https://github.github.com/gfm/) into our custom documentation site.
+
+![tidbyt.dev social banner](./docs/img/social.png)
 
 # Editing Documentation
 All docs are available in the `docs/` directory of this project. Any file with a `.md` extension will be available on the published docs site. As a rule of thumb, markdown should render properly through GitHub web, VSCode, and any other popular markdown editor. If markdown displays properly through the GitHub web viewer, it should display properly on our site.
