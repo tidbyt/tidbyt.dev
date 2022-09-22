@@ -29,7 +29,7 @@ export default function Home() {
 
     return (
         <Box sx={{ flexGrow: 1, backgroundColor: solarized.base03 }}>
-            <Header open={open} handleOpen={handleOpen} handleClose={handleClose} />
+            <Header open={open} handleOpen={handleOpen} />
             <Navigation open={open} handleOpen={handleOpen} handleClose={handleClose} />
             <Box
                 display="flex"
