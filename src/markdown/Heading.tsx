@@ -1,14 +1,15 @@
 import React from 'react';
 
-import Box from '@mui/system/Box';
-import { Typography } from '@mui/material';
+import { Typography, Box } from '@mui/material';
+
+import Link from './Link';
 
 type Props = {
     level: number,
     children: JSX.Element,
 }
 
-export default function Heading({ level, children }: Props) {
+export default function Heading({ level, children, id }: Props) {
     const variant = `h${level}`;
     const marginTop = calcMarginTop(level);
     const marginBottom = calcMarginBottom(level);
@@ -27,9 +28,19 @@ export default function Heading({ level, children }: Props) {
         }
     }
 
+    const link = id ? (
+        <Link href={`#${id}`} mt={marginTop} mb={marginBottom} underline="hover" mr={1}>
+            <span>#</span>
+        </Link>
+    ) : null;
+
     return (
-        <Typography mt={marginTop} mb={marginBottom} variant={variant}>
-            {children}
-        </Typography>
+        <Box sx={{ display: 'flex', alignItems: 'center'}}>
+            {link}
+            <Typography mt={marginTop} mb={marginBottom} variant={variant} id={id}>
+                {children}
+            </Typography>
+        </Box>
+
     );
 }

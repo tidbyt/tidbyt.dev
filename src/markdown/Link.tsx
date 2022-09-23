@@ -9,17 +9,17 @@ type Props = {
     children: JSX.Element,
 }
 
-export default function Link({ href, children }: Props) {
-    if (href.startsWith('http')) {
+export default function Link({ href, children, ...props }: Props) {
+    if (href.startsWith('http') || href.startsWith('#')) {
         return (
-            <MuiLink href={href}>
+            <MuiLink href={href} {...props}>
                 {children}
             </MuiLink>
         );
     }
 
     return (
-        <MuiLink component={RouterLink} to={href}>
+        <MuiLink component={RouterLink} to={href} {...props}>
             {children}
         </MuiLink>
     );

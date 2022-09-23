@@ -1,12 +1,12 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import rehypeRaw from 'rehype-raw'
+import rehypeRaw from 'rehype-raw';
 import { useLocation } from 'react-router-dom';
-import remarkUnwrapImages from 'remark-unwrap-images'
-
+import remarkUnwrapImages from 'remark-unwrap-images';
+import rehypeSlug from 'rehype-slug'
 
 import Row from './table/Row';
 import Table from './table/Table';
@@ -31,11 +31,23 @@ type Props = {
 export default function Markdown({ source }: Props) {
     const location = useLocation();
 
+    useEffect(() => {
+        if (location.hash) {
+            const id = location.hash.substring(1);
+            const anchor = document.getElementById(id);
+    
+            if (anchor) {
+                anchor.scrollIntoView({ behavior: "auto" });
+                window.scrollBy(0, -80); 
+            }
+        }
+    }, []);
+
     return (
         <ReactMarkdown
             children={source}
             transformLinkUri={(href: string) => {
-                if (href.startsWith('http')) {
+                if (href.startsWith('http') || href.startsWith('#')) {
                     return href;
                 }
 
@@ -46,7 +58,7 @@ export default function Markdown({ source }: Props) {
                 return `/static/${src}`;
             }}
             remarkPlugins={[remarkGfm, remarkUnwrapImages]}
-            rehypePlugins={[rehypeRaw]}
+            rehypePlugins={[rehypeRaw, rehypeSlug]}
             components={{
                 code: CodeBlock,
                 p: Paragraph,
