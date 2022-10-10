@@ -366,12 +366,12 @@ render.Row(
 Sequence renders a list of child widgets in sequence.
 
 Each child widget is rendered for the duration of its
-frame count, then the next child wiget in the list will
+frame count, then the next child widget in the list will
 be rendered and so on.
 
 It comes in quite useful when chaining animations.
 If you want to know more about that, go check
-out the [animation](animation.md) documentation.
+out the [animation](../06_reference/animation.md) documentation.
 
 #### Attributes
 | Name | Type | Description | Required |
@@ -422,7 +422,7 @@ Text draws a string of text on a single line.
 By default, the text will use the "tb-8" font, but other fonts can
 be chosen via the `font` attribute. The `height` and `offset`
 parameters allow fine tuning of the vertical layout of the
-string. Take a look at the [font documentation](fonts.md) for more
+string. Take a look at the [font documentation](../02_build/07_fonts_in_pixlet.md) for more
 information.
 
 #### Attributes
