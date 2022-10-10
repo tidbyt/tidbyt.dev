@@ -56,7 +56,7 @@ Building Pixlet (on Windows)
 [MINGW64 environment]: https://www.msys2.org/docs/environments/
 
 ## Build from source
-Note - if you're trying to build for windows, check out the [windows build instructions](BUILD_WINDOWS.md).
+Note - if you're trying to build for windows, check out the [windows build instructions](#install-on-windows).
 
 ### Prerequisites
 
