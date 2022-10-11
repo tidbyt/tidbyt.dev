@@ -28,9 +28,10 @@ control your device, so be careful sharing it!
 To "push" the Bitcoin graphic to your Tidbyt, run:
 
 ```
-pixlet push --api-token "<API TOKEN>" "<DEVICE ID>" examples/bitcoin.webp
+pixlet push "<DEVICE ID>" examples/bitcoin.webp
 ```
 
+Run `pixlet devices` if you don't know the device ID of your device.
 If all goes well, you should see the Bitcoin tracker appear on your Tidbyt:
 
 ![Tidbyt device displaying a Bitcoin tracker](img/tidbyt_2.jpg)
@@ -51,7 +52,7 @@ When pushing a graphic, you can instruct Pixlet to create an
 installation for you:
 
 ```
-pixlet push --installation-id bitcoin --api-token "<API TOKEN>" "<DEVICE ID>" examples/bitcoin.webp
+pixlet push --installation-id bitcoin "<DEVICE ID>" examples/bitcoin.webp
 ```
 
 This means the graphic will enter the regular rotation of apps, and

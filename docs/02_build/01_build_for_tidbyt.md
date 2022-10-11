@@ -42,12 +42,21 @@ You can view the result by navigating to [http://localhost:8080][3]:
 If you have a Tidbyt, `pixlet` can push apps directly to it:
 
 ```console
-pixlet render hello_world.star
-pixlet push --api-token <YOUR API TOKEN> <YOUR DEVICE ID> \
-    hello_world.webp
+# render the bitcoin example
+pixlet render examples/bitcoin.star
+
+# login to your Tidbyt account
+pixlet login
+
+# list available Tidbyt devices
+pixlet devices
+
+# push to your favorite Tidbyt
+pixlet push <YOUR DEVICE ID> examples/bitcoin.webp
 ```
 
-To get the ID and API key for a device, open the settings for the device in the Tidbyt app on your phone, and tap **Get API key**.
+To get the ID for a device, run `pixlet devices`. Alternatively, you can
+open the settings for the device in the Tidbyt app on your phone, and tap **Get API key**.
 
 ### How it works
 
