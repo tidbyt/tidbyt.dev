@@ -5,7 +5,8 @@
     "start": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "profile": "webpack --profile --json --config webpack.prod.js > profile.json",
-    "test": "jest"
+    "test": "jest",
+    "clearTestCache": "jest --clearCache"
   },
   "type": "module",
   "author": "Tidbyt, Inc.",
@@ -70,7 +71,7 @@
     "mui-markdown": "0.5.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-markdown": "github:remarkjs/react-markdown",
+    "react-markdown": "8.0.3",
     "react-redux": "8.0.4",
     "react-router": "6.4.2",
     "react-router-dom": "6.4.2",

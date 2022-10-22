@@ -1,15 +1,14 @@
-import { Box, Button, Paper, Typography } from '@mui/material';
 import React from 'react';
 
 import SyntaxHighlighter from 'react-syntax-highlighter';
-
+import { Box, Paper, Typography } from '@mui/material';
 import { solarizedDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import { solarized } from '../theme/colors';
 
 type Props = {
-    inline: boolean,
-    className: string,
-    children: JSX.Element,
+    inline?: boolean,
+    className?: string,
+    children?: JSX.Element,
 }
 
 export default function CodeBlock({ inline, className, children }: Props) {

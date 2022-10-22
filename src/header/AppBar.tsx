@@ -14,9 +14,14 @@ type Props = {
     children: JSX.Element,
 }
 
+type StyledAppBarProps = AppBarProps & {
+    open: boolean,
+    theme?: any,
+}
+
 const StyledAppBar = styled(MuiAppBar, {
-    shouldForwardProp: (prop) => prop !== 'open',
-})<AppBarProps>(({ theme, open }) => ({
+    shouldForwardProp: (prop: any) => prop !== 'open',
+})<StyledAppBarProps>(({ theme, open }: StyledAppBarProps) => ({
     transition: theme.transitions.create(['margin', 'width'], {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
@@ -37,7 +42,7 @@ export default function AppBar({ children, open }: Props) {
 
     if (desktop) {
         return (
-            <StyledAppBar position="fixed" open={open} elevation={0} sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, backgroundColor: solarized.base03 }}>
+            <StyledAppBar position="fixed" open={open} elevation={0} sx={{ zIndex: (theme: any) => theme.zIndex.drawer + 1, backgroundColor: solarized.base03 }}>
                 {children}
             </StyledAppBar>
         );
