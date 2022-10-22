@@ -1,11 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import App from './App';
+import Logo from './Logo';
 
-it('app loads without error', () => {
+it('Logo loads without error', () => {
     const component = renderer.create(
-        <App />
+        <Logo width={100} height={100} color='#f00' />
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();

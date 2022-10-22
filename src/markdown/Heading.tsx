@@ -7,6 +7,7 @@ import Link from './Link';
 type Props = {
     level: number,
     children: JSX.Element,
+    id?: string,
 }
 
 export default function Heading({ level, children, id }: Props) {
@@ -29,18 +30,31 @@ export default function Heading({ level, children, id }: Props) {
     }
 
     const link = id ? (
-        <Link href={`#${id}`} mt={marginTop} mb={marginBottom} underline="hover" mr={1}>
+        <Link
+            href={`#${id}`}
+            mt={marginTop}
+            mb={marginBottom}
+            // @ts-ignore
+            underline="hover"
+            mr={1}
+        >
             <span>#</span>
         </Link>
     ) : null;
 
     return (
-        <Box sx={{ display: 'flex', alignItems: 'center'}}>
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
             {link}
-            <Typography mt={marginTop} mb={marginBottom} variant={variant} id={id}>
+            <Typography
+                mt={marginTop}
+                mb={marginBottom}
+                // @ts-ignore
+                variant={variant}
+                id={id}
+            >
                 {children}
             </Typography>
         </Box>
 
-    );
+    ); // @ts-ignore
 }

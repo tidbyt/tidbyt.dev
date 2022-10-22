@@ -3,9 +3,8 @@ import '@fontsource/barlow/500.css';
 import '@fontsource/barlow/700.css';
 import '@fontsource/material-icons';
 
-import { solarized } from './colors';
-
 import { createTheme } from '@mui/material';
+import { solarized } from './colors';
 
 
 export const theme = createTheme({

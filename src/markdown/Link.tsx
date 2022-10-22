@@ -2,8 +2,9 @@ import React from 'react';
 
 import { Link as MuiLink } from '@mui/material';
 import { Link as RouterLink } from "react-router-dom";
+import { LinkBaseProps } from '@mui/material';
 
-type Props = {
+type Props = LinkBaseProps & {
     title: string,
     href: string,
     children: JSX.Element,
