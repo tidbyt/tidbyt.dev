@@ -46,7 +46,7 @@ export default function Markdown({ source }: Props) {
         <ReactMarkdown
             children={source}
             transformLinkUri={(href: string) => {
-                if (href.startsWith('http') || href.startsWith('#')) {
+                if (href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto')) {
                     return href;
                 }
 

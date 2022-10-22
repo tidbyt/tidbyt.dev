@@ -11,7 +11,7 @@ type Props = LinkBaseProps & {
 }
 
 export default function Link({ href, children, ...props }: Props) {
-    if (href.startsWith('http') || href.startsWith('#')) {
+    if (href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto')) {
         return (
             <MuiLink href={href} {...props}>
                 {children}
