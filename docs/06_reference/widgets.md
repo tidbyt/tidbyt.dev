@@ -388,7 +388,6 @@ render.Sequence(
   ],
 ),
 ```
-![](img/widget_Sequence_0.gif)
 
 
 ## Stack
