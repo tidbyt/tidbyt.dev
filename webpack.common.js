@@ -20,7 +20,7 @@ export default {
             },
             {
                 test: /\.css$/,
-                exclude: [/node_modules/],
+                exclude: [/node_modules/, /src\/console/],
                 use: [
                     'style-loader',
                     {
@@ -33,7 +33,7 @@ export default {
             },
             {
                 test: /\.css$/,
-                include: [/node_modules/],
+                include: [/node_modules/, /src\/console/],
                 use: [
                     'style-loader',
                     {

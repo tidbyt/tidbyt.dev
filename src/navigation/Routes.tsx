@@ -7,6 +7,7 @@ import { getDocs } from './docs';
 import PublicAPI from '../publicapi/PublicAPI';
 import ScrollToTop from './ScrollToTop';
 import NotFound from '../notfound/NotFound';
+import Console from '../console/Console';
 
 
 export default function Routes() {
@@ -26,6 +27,7 @@ export default function Routes() {
             <ScrollToTop />
             <RouterRoutes>
                 <Route path="/" element={<Home />} />
+                <Route path='/console' element={<Main ><Console /></Main>} />
                 <Route path="/docs/api" element={<Main ><PublicAPI /></Main>} />
                 {genRoutes()}
                 <Route path='/docs' element={<Navigate to='/docs/overview/getting-started' />} />
