@@ -9,9 +9,10 @@ type Props = {
     inline?: boolean,
     className?: string,
     children?: JSX.Element,
+    code?: string,
 }
 
-export default function CodeBlock({ inline, className, children }: Props) {
+export default function CodeBlock({ inline, className, children, code }: Props) {
     if (inline) {
         return (
             <Box component={'code'} sx={{
@@ -35,6 +36,10 @@ export default function CodeBlock({ inline, className, children }: Props) {
         language = 'python'
     }
 
+    if (!code) {
+        code = String(children).replace(/\n$/, '')
+    }
+
     return (
         <Box sx={{ minWidth: '100%' }}>
             <Paper sx={{ borderRadius: 2, backgroundColor: solarized.base03 }}>
@@ -43,7 +48,7 @@ export default function CodeBlock({ inline, className, children }: Props) {
                         customStyle={{
                             background: 'none',
                         }}
-                        children={String(children).replace(/\n$/, '')}
+                        children={code}
                         style={solarizedDark}
                         language={language}
                     />
