@@ -2,6 +2,7 @@
 To use Pixlet, one first has to install the CLI tool.
 
 ## Install on macOS
+First, install [Homebrew](https://brew.sh/) on your computer. Then, in your terminal, run the following:
 
 ```
 brew install tidbyt/tidbyt/pixlet
@@ -9,83 +10,44 @@ brew install tidbyt/tidbyt/pixlet
 
 ## Install on Linux
 
-Download the `pixlet` binary from [the latest release][1].
+Download the `pixlet` binary from [the latest release][1] and move it into your `PATH`. A complete example looks like the following:
+
+```bash
+# Download the archive.
+curl -LO https://github.com/tidbyt/pixlet/releases/download/v0.22.4/pixlet_0.22.4_linux_amd64.tar.gz
+
+# Unpack the archive.
+tar -xvf pixlet_0.22.4_linux_amd64.tar.gz
+
+# Ensure the binary is executable.
+chmod +x ./pixlet
+
+# Move the binary into your path.
+sudo mv pixlet /usr/local/bin/pixlet
+```
 
 ## Install on Windows
-Building Pixlet (on Windows)
+First, install a file archiver that can support `tar.gz` archives if you don't already have one. [NanaZip](https://apps.microsoft.com/store/detail/nanazip/9N8G7TSCL18R) works great if you don't know where to start. Once installed, Download the Windows `pixlet` binary from [the latest release][1] on GitHub. 
 
-### Prerequisites
+Open the file with NanaZip and double click on the archive to see the contents. Then, click extract:
+![windows NanaZip extract](img/windows_extract.png)
 
-- Having [MSYS2 installed].
-- Having [node installed].
+Navigate to `This PC` -> `Local Disk` -> `Program Files` and create a folder named Pixlet. Copy the extracted contents to this folder:
+![windows pixlet folder](img/windows_pixlet_folder.png)
 
-### Steps
-- Start the [MINGW64 environment].
-- Install dependencies:
-	```console
-	pacman -S git
-	pacman -S mingw-w64-x86_64-go
-	pacman -S mingw-w64-x86_64-toolchain
-	pacman -S mingw-w64-x86_64-libwebp
-	```
-- Add `node` and `npm` to your path:
-	```console
-	export PATH=$PATH:/c/Program\ Files/nodejs
-	```
-- Clone the repository:
-	```console
-	git clone https://github.com/tidbyt/pixlet
-	```
-- Cd into the repository:
-	```console
-	cd pixlet
-	```
-- Build the frontend:
-	```console
-	npm install
-	npm run build
-	```
-- Build the binary:
-	```console
-	make build
-	```
-- After that you will have the binary `/pixlet.exe`, which you should copy to your path.
+Go to `Settings` and search for `environment variables` and select `Edit the system environment variables`:
+![windows env 01](img/windows_env_01.png)
 
-[node installed]: https://nodejs.org/en/download/
-[MSYS2 installed]: https://www.msys2.org/#installation
-[MINGW64 environment]: https://www.msys2.org/docs/environments/
+Click `Environment Variables`:
+![windows env 02](img/windows_env_02.png)
 
-## Build from source
-Note - if you're trying to build for windows, check out the [windows build instructions](#install-on-windows).
+Under `User space variables`, select `Path` and select `Edit`:
+![windows env 03](img/windows_env_03.png)
 
-### Prerequisites
+Click `New` and browse to the newly created Pixlet folder and click ok:
+![windows env 04](img/windows_env_04.png)
 
-- Having [go installed].
-- Having [node installed].
-- Having [libwebp installed].
-
-### Steps
-- Clone the repository:
-	```console
-	git clone https://github.com/tidbyt/pixlet
-	```
-- Cd into the repository:
-	```console
-	cd pixlet
-	```
-- Build the frontend:
-	```console
-	npm install
-	npm run build
-	```
-- Build the binary:
-	```console
-	make build
-	```
-- After that you will have the binary `/pixlet`, which you should copy to your path.
-
-[go installed]: https://golang.org/dl/
-[node installed]: https://nodejs.org/en/download/
-[libwebp installed]: https://developers.google.com/speed/webp/download
+Open a new instance of PowerShell and run `pixlet version`. If all went well, you should see the following:
+![windows env 05](img/windows_env_05.png)
 
 [1]: https://github.com/tidbyt/pixlet/releases/latest
