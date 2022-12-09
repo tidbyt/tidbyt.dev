@@ -65,7 +65,7 @@
     "@mui/material": "5.10.17",
     "@mui/system": "5.10.17",
     "@reduxjs/toolkit": "1.9.1",
-    "@types/node": "18.11.11",
+    "@types/node": "18.11.12",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.9",
     "@types/w3c-web-serial": "^1.0.3",
