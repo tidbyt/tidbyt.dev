@@ -63,6 +63,11 @@ The `get_schema` method returns a `schema.Schema` object that contains _fields_.
 
 Next up should be more familiar. We're now passing `config` into `main()`. This is the same for current pixlet scripts that take `config` today. In [Community Apps](https://github.com/tidbyt/community), we will populate the config hashmap with values configured from the mobile app.
 
+Configuration values can be set when using `pixlet render` by specifying `id=value`. The hello world example may be rendered with different configs as follows:
+```
+pixlet render schema_hello_world.star who="Tidbyt" small=True
+```
+
 ## Icons
 Each schema field takes an `icon` value. We use the free icons from [Font Awesome](https://fontawesome.com/v6/search?s=solid%2Cbrands) at version 6.1.1 with the names camel cased. For example [users-cog](https://fontawesome.com/v6/icons/users-cog?style=solid&s=solid) should be `usersCog` in the `icon` value. When submitting to the community repo, the icon names are validated against this [icon map](https://github.com/tidbyt/community/blob/main/apps/icons.go).
 
