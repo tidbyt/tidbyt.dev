@@ -18,7 +18,7 @@ Everything supported in the [GitHub Flavored Markdown](https://github.github.com
 To ensure the order of your documentation appears as expected, prefix a directory or document using two digits. For example `docs/01_foo/02_bar.md` to ensure both the directory and the document are ordered relative to the other directories and documents.
 
 ## Links
-Links to other markdown files will be converted automatically for you. For example, in `docs/foo/foo.md`, you could like to `docs/bar/bar.md` as follows:
+Links to other markdown files will be converted automatically for you. For example, in `docs/foo/foo.md`, you could link to `docs/bar/bar.md` as follows:
 ```
 [check out bar](../bar/bar.md)
 ```
