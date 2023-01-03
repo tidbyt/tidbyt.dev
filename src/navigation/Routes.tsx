@@ -26,16 +26,21 @@ export default function Routes() {
         <BrowserRouter>
             <ScrollToTop />
             <RouterRoutes>
+                {/* Custom pages */}
                 <Route path="/" element={<Home />} />
                 <Route path='/console' element={<Main ><Console /></Main>} />
                 <Route path="/docs/api" element={<Main ><PublicAPI /></Main>} />
+                {/* Documentation */}
                 {genRoutes()}
+                {/* Redirects */}
                 <Route path='/docs' element={<Navigate to='/docs/overview/getting-started' />} />
                 <Route path='/docs/overview' element={<Navigate to='/docs/overview/getting-started' />} />
                 <Route path='/docs/build' element={<Navigate to='/docs/build/build-for-tidbyt' />} />
                 <Route path='/docs/integrate' element={<Navigate to='/docs/integrate/pushing-apps' />} />
                 <Route path='/docs/publish' element={<Navigate to='/docs/publish/community-apps' />} />
                 <Route path='/docs/engage' element={<Navigate to='/docs/engage/community' />} />
+                <Route path='/docs/tidbyt-api' element={<Navigate to='/docs/api' />} />
+                {/* Not found */}
                 <Route path='*' element={<Main ><NotFound /></Main>} />
             </RouterRoutes>
         </BrowserRouter>
