@@ -10,13 +10,17 @@ Make sure you have [go1.16](https://go.dev/) or later and `make` installed on yo
 ## Quick Start
 Fork and clone the [Tidbyt community repo](https://github.com/tidbyt/community) to your local machine, and then run the following from the local folder, to generate everything you need!
 ```
-make app
+pixlet create
 ```
 
 > Note: the codegen tool is a bit picky. This is because these strings show up in the Tidbyt mobile app and we want to ensure the UX works as expected.
 
 Once created, edit `apps/{{appname}}/{{app_name}}.star` with your source code.
 
+When you're ready to publish, run the following to ensure your app is ready:
+```
+pixlet check apps/{{appname}}/{{app_name}}.star
+```
 
 ## Detailed Instructions
 
@@ -28,25 +32,15 @@ Once created, edit `apps/{{appname}}/{{app_name}}.star` with your source code.
 
 ### 2. Clone the community repo to your local machine
 
-### 3. Install Go if it is not already installed
+### 3. Create your app
 
-- Enter `go version` to check if it is already installed.
-- If not, download it here: https://go.dev/doc/install
-- You may need to restart your Terminal after installing so that the Go install path is recognized. 
+- Run `pixlet create` via the terminal
 
-### 4. Install Make if it is not already installed
-
-- Enter `make --v` to check if it is already installed.
-
-### 5. Generate the app template files
-
-- Run `make app` via the terminal
-
-This should be run from the 'community' repo folder on your local machine. (The folder containing the Makefile.)
+This should be run from the 'community' repo folder on your local machine.
 You will be prompted for the relevant information about your app and the required files and folders will be generated.
 
 ```
-$ make app
+$ pixlet create
 Name (what do you want to call your app?): Tides
 Summary (what's the short and sweet of what this app does?): Tide charts
 Description (what's the long form of what this app does?): Daily tide charts for your location.
@@ -75,7 +69,7 @@ In this example, the fields map as follows:
  Preview your App in your browser at http://localhost:8080/ by running:
 
 ```
-pixlet serve --watch apps/{{appname}}/{{app_name}}.star
+pixlet serve apps/{{appname}}/{{app_name}}.star
 ```
 
 #### Generate a Screenshot
@@ -86,23 +80,9 @@ You can generate an enlarged screen render by entering:
 pixlet render apps/{{appname}}/{{app_name}}.star --gif --magnify 10
 ```
 
-### 6. Add a Readme File and screenshot to your app folder (Optional)
+### 4. Making a PR
 
-By including a README.md file and screenshot in your app folder, you will make it easier for other developers to get a better sense of what your app does. See the example [here](https://github.com/tidbyt/community/tree/main/apps/digibyteprice).
-
-### 7. Making a PR
-
-Before submitting your app, run `make lint` from within the 'community' folder to check your code for errors.
-
-Note: If you receive an error like the following, it is probably because the Go binary is not in your path:
-
-![lint error](img/lint_error.png)
-
-You can typically fix this with:
-```
-export PATH=$PATH:$HOME/go/bin
-```
-
+Before submitting your app, run `pixlet check apps/{{appname}}/{{app_name}}.star` to check your code for errors.
 
 When you go to make a PR, give us a little background on what your app does. In addition, include a render from the following command so we can ooh-ahh 😍:
 ```
