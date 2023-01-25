@@ -3,10 +3,6 @@ So pumped you're here and want to publish an app! If you haven't done so already
 
 One final note before we hop in - you may want to check out the [schema docs](../06_reference/schema.md) if you haven't already. Schema allows you to display options inside of the Tidbyt mobile app so the user can configure your starlark applet.
 
-## Prerequisites
-Make sure you have [go1.16](https://go.dev/) or later and `make` installed on your system.
-
-
 ## Quick Start
 Fork and clone the [Tidbyt community repo](https://github.com/tidbyt/community) to your local machine, and then run the following from the local folder, to generate everything you need!
 ```
