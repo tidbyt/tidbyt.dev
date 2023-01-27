@@ -8,8 +8,8 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import AppBar from './AppBar';
-//import SearchBar from '../search/Search';
-import SearchIcon from '@mui/icons-material/Search';
+
+
 import Logo from './Logo';
 import { solarized } from '../theme/colors';
 
@@ -55,13 +55,6 @@ export default function Header({ open, handleOpen }: Props) {
                     </Box>
                 </Link>
                 <Box sx={{ flexGrow: 1 }} />
-                <IconButton
-                    size="large"
-                    edge="end"
-                    href="https://github.com/tidbyt"
-                >
-                    <SearchIcon />
-                </IconButton>
                 <IconButton
                     size="large"
                     edge="end"
