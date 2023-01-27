@@ -163,7 +163,7 @@ Now that's a Bitcoin tracker.
 ## Caching
 
 Finally, let's make sure we're not spamming CoinDesk with more
-requests than absolutely necessary.
+requests than absolutely necessary. Check out [Module reference](../06_reference/modules.md) for more information on the `cache` module.
 
 ```starlark
 load("render.star", "render")

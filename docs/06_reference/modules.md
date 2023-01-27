@@ -51,6 +51,8 @@ In addition to the Starlib modules, Pixlet offers a cache module.
 Keys and values must all be string. Serialization of non-string data
 is the developer's responsibility.
 
+**NOTE*:* All Tidbyts apps share the same cache keys!!!!
+
 Example:
 
 ```starlark
