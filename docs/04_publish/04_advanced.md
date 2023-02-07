@@ -2,8 +2,9 @@
 
 To write really great apps, it's helpful to understand how Tidbyt
 devices function, and how they interact with the backend where
-community apps are running. There are a few advanced features that can
-influence certain aspects of these interactions, which we'll cover here.
+community apps run. There are a few advanced features that can
+influence certain aspects of these interactions, which we'll cover
+here.
 
 ## Device side caching and `maxAge`
 
@@ -27,8 +28,8 @@ their `Root` widget. When present, this field instructs Tidbyt devices
 to discard the graphic when a certain amount of time has
 passed. During normal operation, the backend will ship out replacement
 graphics before this happens, but when that fails it is in some cases
-preferable to not display anything at all, than to display stale data
-that the user will assume is correct.
+better to display nothing at all, than to display stale data that the
+user will assume is correct.
 
 ## App cycle speed and `show_full_animation`
 
@@ -44,9 +45,9 @@ displayed as many times as possible, without truncating the
 animation. For instance, if an animation is 7 seconds long, and the
 app cycle speed allows for 15 seconds per app, then the animation will
 be displayed twice for a total of 14 seconds. While a single second
-remains of the time window, using to display a small piece of the
+remains of the time window, using it to display a small piece of the
 animation a third time will typically result in a jarring experience
-for the user.
+for the user. We don't want that.
 
 If an animation exceeds the time window, it will be truncated to
 fit. This gives the user a predictable experience, where they know
@@ -60,9 +61,11 @@ truncated halfway through. While one can argue that shorter quotes
 should be used, this isn't always a reasonable solution. For such
 cases, the `show_full_animation` field on the `Root` object can be
 used to request that the device's app cycle speed is ignored, and that
-the animation is shown in full.
+the animation is shown in full. If the user is bothered by the
+longer-than-normal app duration, they'll simply have to uninstall the
+app.
 
-It can be tempting to throw this setting on any old app, but we would
+It can be tempting to throw this setting on all apps, but we would
 encourage developers to use some restraint. If the app can be
 redesigned to fit all its data in a shorter animation, then that may
 be preferable. If not, then `show_full_animation` may be the way to
