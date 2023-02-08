@@ -23,7 +23,7 @@ illustrative example of this being problematic is the clock app. If
 some sort of glitch is preventing up-to-date graphics to reach a
 device, the clock will effectively be running behind.
 
-To counter this, Tidbyt apps can optionally specify a `maxAge` on
+To counter this, Tidbyt apps can optionally specify a `max_age` on
 their `Root` widget. When present, this field instructs Tidbyt devices
 to discard the graphic when a certain amount of time has
 passed. During normal operation, the backend will ship out replacement
