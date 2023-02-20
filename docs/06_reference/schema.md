@@ -216,7 +216,7 @@ schema.LocationBased(
 )
 ```
 
-A handler for `LocationBased` is provided a location object:
+A handler for `LocationBased` is provided a json encoded location object:
 ```json
 {
 	"lat": "40.6781784",
