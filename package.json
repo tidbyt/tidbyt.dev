@@ -62,7 +62,7 @@
     "@mdx-js/react": "^2.1.2",
     "@mui/icons-material": "5.11.9",
     "@mui/lab": "5.0.0-alpha.120",
-    "@mui/material": "5.11.9",
+    "@mui/material": "5.11.10",
     "@mui/system": "5.11.9",
     "@reduxjs/toolkit": "1.9.2",
     "@types/node": "18.14.0",
