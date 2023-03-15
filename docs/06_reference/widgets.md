@@ -295,6 +295,8 @@ displayed past a certain point in time, pass _MaxAge_ to specify
 an expiration time in seconds. Display devices use this to avoid
 displaying stale data in the event of e.g. connectivity issues.
 
+**NOTE*:* If you only want your app to display when there is data (e.g. for alerts) you can use `return []` rather than `return render.Root`. This will cause your app to not display in your app rotation.
+
 #### Attributes
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
