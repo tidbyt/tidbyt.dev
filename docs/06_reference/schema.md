@@ -85,14 +85,19 @@ These are the current fields we support through schema today. Note that any addi
 Color provides a color picker. It is provided in `config` as a hex color string with a `#` prefix. The value is ready to use in widgets, like `render.Box()`.
 
 ```starlark
-schema.Color(
-    id = "text_color",
-    name = "Text color",
-    desc = "Color for text elements",
-    icon = "brush",
-    default = "#ffcc22",
-    palette = ["#ffcc22", "#ff0000", "#00ff00"],
-)
+def get_schema():
+    return schema.Schema(
+        version = "1",
+        fields = [
+            schema.Color(
+                id = "color",
+                name = "Color",
+                desc = "Color of the screen.",
+                icon = "brush",
+                default = "#7AB0FF",
+            ),
+        ],
+    )
 ```
 
 You can also provide an optional `palette` parameter to guide your users towards reasonable color options:
