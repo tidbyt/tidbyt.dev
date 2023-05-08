@@ -9,8 +9,6 @@ pixlet format
 ```
 
 ## When will my app be available in the Tidbyt mobile app?
-When new apps are merged in the community repo, it gets released to all beta users immediately using a [CI process](https://github.com/tidbyt/community/actions/workflows/main.yml). From there, a Tidbyt engineer will ensure your app is ready for release to all customers. New apps get announced using the #new-apps channel on Discord.
-
-Interested in becomming a beta tester? Please sign up [here](https://forms.gle/D1v5ndgGqTbkvJFg8)
+When new apps are merged in the community repo, it gets released to all users immediately using a [CI process](https://github.com/tidbyt/community/actions/workflows/main.yml). New apps get announced using the #new-apps channel on Discord.
 
 If you're not sure where your app is in the release process, feel free to ping `@TIDBYT` on Discord!
