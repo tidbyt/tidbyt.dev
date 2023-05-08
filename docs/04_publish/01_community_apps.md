@@ -29,11 +29,11 @@ to be merged into the main branch of the community repo. This requires
 some reviewing from Tidbyt employees (and often other community
 developers) to make sure it's up to snuff.
 
-Once a new app is merged, it'll enter a Beta stage during which only a
-small group of users can install it on their Tidbyt devices. When an
-app has been deemed "good to go", it is then released to all other
-Tidbyt users. If you want to sign up to become a beta tester, you can
-do so [here](https://forms.gle/zGqUyCv9kUh6YUic9).
+Once a new app is merged, it will be publicly available to everyone via search.
+Tidbyt employees will manually categorize apps on the explore page. Which apps
+make it into the explore page is an editorial decision by our team. We do take
+suggestions, though ultimately how we editorialize apps is up to the discretion
+of the Tidbyt team.
 
 For the nitty gritty on how to get a new app published, check out
 [Publishing Apps](./02_publishing_apps.md)
