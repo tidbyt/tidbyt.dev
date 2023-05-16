@@ -65,9 +65,11 @@ Pixlet scripts are written in a simple, Python-like language called
 retrieve data over HTTP, transform it and use a collection of
 _Widgets_ to describe how the data should be presented visually.
 
-The Pixlet CLI runs these scripts and renders the result as a WebP
+The Pixlet CLI runs these scripts on your computer (Mac, Windows or Linux) and renders the result as a WebP
 or GIF animation. You can view the animation in your browser, save
 it, or even push it to a Tidbyt device with `pixlet push`.
+
+Note: Scripts do not run on Tidbyt devices, only rendered WebP or GIF animations are sent to it.
 
 ## What's next?
 
