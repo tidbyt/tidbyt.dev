@@ -17,7 +17,7 @@ retrieve the data.
 Pixlet includes several modules from the
 [Starlib](https://github.com/qri-io/starlib) library. This is sort of
 a standard library for Starlark, and it's very handy when building
-anything but the simplest applet.
+anything but the simplest app.
 
 ```starlark
 load("render.star", "render")
@@ -51,7 +51,7 @@ Voilà. A perfectly functional Bitcoin price tracker.
 
 ## Adding an icon
 
-To make our applet a bit snazzier, we headed over to
+To make our app a bit snazzier, we headed over to
 [Pixilart](https://www.pixilart.com/) and drew this simple Bitcoin
 icon:
 
@@ -163,13 +163,20 @@ Now that's a Bitcoin tracker.
 ## Caching
 
 Finally, let's make sure we're not spamming CoinDesk with more
-requests than absolutely necessary. Check out [Module reference](../06_reference/modules.md) for more information on the `cache` module.
+requests than what's absolutely necessary. The simplest way to do this
+is to rely on the HTTP module's built-in cache functionality, by adding
+`ttl_seconds` to the `http.get()` call. This instructs the module to
+cache the response for a given period of time.
+
+A special header will be set on the response to indicate if it was
+served from cache or straight from the API. While we're using it in
+this example to illustrate the cache behavior, it's not something
+developers normally need to care about.
 
 ```starlark
 load("render.star", "render")
 load("http.star", "http")
 load("encoding/base64.star", "base64")
-load("cache.star", "cache")
 
 COINDESK_PRICE_URL = "https://api.coindesk.com/v1/bpi/currentprice.json"
 
@@ -181,17 +188,16 @@ AYozjsoBoE45OZi5DRBSnkCAMLhlPBiQGHlAAAAAElFTkSuQmCC
 """)
 
 def main():
-    rate_cached = cache.get("btc_rate")
-    if rate_cached != None:
+    rep = http.get(COINDESK_PRICE_URL, ttl_seconds = 240) # cache for 4 minutes
+    if rep.status_code != 200:
+        fail("Coindesk request failed with status %d", rep.status_code)
+    rate = rep.json()["bpi"]["USD"]["rate_float"]
+
+    # for development purposes: check if result was served from cache or not
+    if rep.headers.get("Tidbyt-Cache-Status") == "HIT":
         print("Hit! Displaying cached data.")
-        rate = int(rate_cached)
     else:
         print("Miss! Calling CoinDesk API.")
-        rep = http.get(COINDESK_PRICE_URL)
-        if rep.status_code != 200:
-            fail("Coindesk request failed with status %d", rep.status_code)
-        rate = rep.json()["bpi"]["USD"]["rate_float"]
-        cache.set("btc_rate", str(int(rate)), ttl_seconds=240)
 
     return render.Root(
         child = render.Box(
@@ -223,7 +229,7 @@ listening on tcp/8080
 ```
 
 That's the cache working as intended. We're passing `ttl_seconds=240`
-to `cache.set()`, so if we were to wait 4 minutes and then reload,
+to `http.get()`, so if we were to wait 4 minutes and then reload,
 we'd see a cache miss as the old record has expired.
 
 ## What's next?

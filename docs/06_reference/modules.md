@@ -34,14 +34,38 @@ individual modules, please refer to the Starlib documentation.
 | [`encoding/json.star`](https://github.com/qri-io/starlib/tree/master/encoding/json) | JSON encoding and decoding |
 | [`hash.star`](https://github.com/qri-io/starlib/tree/master/hash) | MD5, SHA1, SHA256 hash generation  |
 | [`html.star`](https://github.com/qri-io/starlib/tree/master/html) | jQuery-like functions for HTML  |
-| [`http.star`](https://github.com/qri-io/starlib/tree/master/http) | HTTP client |
 | [`math.star`](https://github.com/qri-io/starlib/tree/master/math) | Mathematical functions and constants |
 | [`re.star`](https://github.com/qri-io/starlib/tree/master/re) | Regular expressions |
 | [`time.star`](https://github.com/qri-io/starlib/tree/master/time) | Time operations |
 
+## Starlib HTTP
+
+Pixlet also includes a version of the Starlib HTTP module, which has
+been modified to handle caching. It's very important to keep outgoing
+request rates at reasonable levels, and for this reason the HTTP
+client has been extended to accept a parameter `ttl_seconds` to
+control for how long HTTP responses should be cached.
+
+| Module | Description |
+| --- | --- |
+| [`http.star`](https://github.com/qri-io/starlib/tree/master/http) | HTTP client _with caching_ |
+
+Example:
+
+```starlark
+load("http.star", "http")
+def get_data(url):
+    res = http.get(url, ttl_seconds=3600) # cache for 1 hour
+    if res.status_code != 200:
+        fail("GET %s failed with status %d: %s", url, res.status_code, res.body())
+    return res.json()
+```
+
 ## Pixlet module: Cache
 
-In addition to the Starlib modules, Pixlet offers a cache module.
+In addition to the Starlib modules, Pixlet offers a cache
+module. Since the HTTP module comes with caching built-in, 95% of apps
+won't need the cache module, but it's there for those that do.
 
 | Function | Description |
 | --- | --- |
@@ -51,7 +75,7 @@ In addition to the Starlib modules, Pixlet offers a cache module.
 Keys and values must all be string. Serialization of non-string data
 is the developer's responsibility.
 
-**NOTE*:* The cache is unique _per app_ and not _per installation_. All installations of your app will share the same cache
+**NOTE*:* The cache is unique _per app_ and not _per installation_. All installations of your app will share the same cache. This is a common source of bugs!
 
 Example:
 
