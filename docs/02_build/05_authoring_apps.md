@@ -45,8 +45,23 @@ config.str("foo") # returns a string, or None if not found
 config.bool("foo") # returns a boolean (True or False), or None if not found
 ```
 
-## Cache
-Use the `cache` module to cache results from API requests or other data that's needed between renders. We require sensible caching for apps in the [Tidbyt Community repo](https://github.com/tidbyt/community). Caching cuts down on API requests, and can make your app more reliable.
+## Caching
+
+Many apps rely on external services and APIs. It's important both to
+be mindful of the request rates hitting these services, and of the
+possibility of bad internet weather causing some requests to
+fail. Caching plays an important role here.
+
+For the majority of apps, it's sufficient to rely on the built-in
+cache functionality of the HTTP module. Simply pass in `ttl_seconds`
+when making a requests, and the HTTP response will be cached
+accordingly. This allows subsequent requests (until the TTL has
+expired) to be served quickly, and without hammering the upstream
+API.
+
+In some cases, additonal and more fine-grained cache logic is
+required. The `cache` module can be handy here, but does come with
+some pitfalls.
 
 **Make sure to create cache keys that are unique for the type of information you are caching.** Each app has its own cache, but that cache is shared among every user. Two installations of the same app by two different users will share the same cache.
 
