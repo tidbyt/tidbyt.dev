@@ -17,7 +17,7 @@ retrieve the data.
 Pixlet includes several modules from the
 [Starlib](https://github.com/qri-io/starlib) library. This is sort of
 a standard library for Starlark, and it's very handy when building
-anything but the simplest applet.
+anything but the simplest app.
 
 ```starlark
 load("render.star", "render")
@@ -51,7 +51,7 @@ Voilà. A perfectly functional Bitcoin price tracker.
 
 ## Adding an icon
 
-To make our applet a bit snazzier, we headed over to
+To make our app a bit snazzier, we headed over to
 [Pixilart](https://www.pixilart.com/) and drew this simple Bitcoin
 icon:
 
@@ -164,7 +164,7 @@ Now that's a Bitcoin tracker.
 
 Finally, let's make sure we're not spamming CoinDesk with more
 requests than what's absolutely necessary. The simplest way to do this
-is to rely on the HTTP module's built-in cache functionality by adding
+is to rely on the HTTP module's built-in cache functionality, by adding
 `ttl_seconds` to the `http.get()` call. This instructs the module to
 cache the response for a given period of time.
 

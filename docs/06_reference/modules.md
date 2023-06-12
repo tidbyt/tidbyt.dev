@@ -40,11 +40,11 @@ individual modules, please refer to the Starlib documentation.
 
 ## Starlib HTTP
 
-Pixlet also includes the Starlib HTTP module, but with an important
-twist: caching. It's very important to keep outgoing request rates at
-reasonable levels, and for this reason the HTTP client has been
-extended to accept a parameter `ttl_seconds` to control for how long
-HTTP responses should be cached.
+Pixlet also includes a version of the Starlib HTTP module, which has
+been modified to handle caching. It's very important to keep outgoing
+request rates at reasonable levels, and for this reason the HTTP
+client has been extended to accept a parameter `ttl_seconds` to
+control for how long HTTP responses should be cached.
 
 | Module | Description |
 | --- | --- |

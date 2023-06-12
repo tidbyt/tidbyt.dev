@@ -48,7 +48,7 @@ In return, you should get a json object with information about your device. It'l
 ```
 
 The key component of that command line is the `-H` flag. Make sure to
-included when performing requests to endpoints that require
+include it when performing requests to endpoints that require
 authentication!
 
 That's pretty much all there's too it. Now go forth and build a thing!

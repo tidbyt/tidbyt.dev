@@ -24,9 +24,9 @@ The `config` object contains values that are useful for your app. You can set th
 1. Passing URL query parameters when using `pixlet serve`.
 2. Setting command-line arguments via `pixlet render`.
 
-When apps that are published to the [Tidbyt Community repo][3], users can install and configure them with the Tidbyt smartphone app. [Define a schema for your app][4] to enable this.
+When apps are published to the [Tidbyt Community repo][3], users can install and configure them with the Tidbyt smartphone app. [Define a schema for your app][4] to enable this.
 
-Your app should always be able to render, even if a config value isn't provided. Provide defaults for every config value, or check if the value is `None`. This will ensure the app behaves as expected even if config was not provided.
+Your app should always be able to render, even if a config value isn't provided. Provide defaults for every config field, or check if the value is `None`. This will ensure the app behaves as expected even if config was not provided.
 
 For example, the following ensures there will always be a value for `who`:
 
@@ -34,7 +34,7 @@ For example, the following ensures there will always be a value for `who`:
 DEFAULT_WHO = "world"
 
 def main(config):
-    who = config.get("who") or DEFAULT_WHO
+    who = config.get("who", DEFAULT_WHO)
     print("Hello, %s" % who)
 ```
 
@@ -47,25 +47,17 @@ config.bool("foo") # returns a boolean (True or False), or None if not found
 
 ## Caching
 
-Many apps rely on external services and APIs. It's important both to
-be mindful of the request rates hitting these services, and of the
-possibility of bad internet weather causing some requests to
-fail. Caching plays an important role here.
+Many apps retrieve data from external services and APIs. It's
+important both to be mindful of the request rates hitting these
+services, and of the possibility of bad internet weather causing some
+requests to fail. Caching plays an important role here.
 
 For the majority of apps, it's sufficient to rely on the built-in
 cache functionality of the HTTP module. Simply pass in `ttl_seconds`
 when making a requests, and the HTTP response will be cached
 accordingly. This allows subsequent requests (until the TTL has
-expired) to be served quickly, and without hammering the upstream
+expired) to be served quickly, without hammering the upstream
 API.
-
-In some cases, additonal and more fine-grained cache logic is
-required. The `cache` module can be handy here, but does come with
-some pitfalls.
-
-**Make sure to create cache keys that are unique for the type of information you are caching.** Each app has its own cache, but that cache is shared among every user. Two installations of the same app by two different users will share the same cache.
-
-A good strategy is to create cache keys based on the config parameters or information being requested.
 
 ## Secrets
 
