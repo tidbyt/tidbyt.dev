@@ -239,12 +239,12 @@ See [examples/sunrise.star](https://github.com/tidbyt/pixlet/blob/dc0f876089bb44
 
 ## Pixlet module: Random
 
-The `random` module provides a pseudorandom number generator for pixlet. The generator is automatically seeded to a new random value on each execution, but a deterministic seed can also be set.
+The `random` module provides a pseudorandom number generator for pixlet. The generator is automatically seeded on each execution. The seed itself changes every 15 seconds, making apps deterministic over that same time window. This behavior enables more effective caching of execution results on Tidbyt servers. Developer can reseed via `random.seed` if needed.
 
 | Function | Description |
 | --- | --- |
 | `seed(s)` | Seeds the generator.|
-| `number(min, max)` | Returns a random number between the min and max. The min has to be 0 or greater. The min has to be less then the max. |
+| `number(min, max)` | Returns a random number between the min and max. The min has to be 0 or greater. The min has to be less than the max. |
 
 Example:
 ```starlark
