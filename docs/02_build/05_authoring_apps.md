@@ -66,7 +66,7 @@ Many apps need secret values like API keys. When publishing your app to the [Tid
 To encrypt values, use the `pixlet encrypt` command. For example:
 
 ```shell
-# replace "googletraffic" with the folder name of your app in the community repo
+# replace "googletraffic" with the ID of your app (as per your manifest.yaml)
 $ pixlet encrypt googletraffic top_secret_google_api_key_123456
 "AV6+...."  # encrypted value
 ```
