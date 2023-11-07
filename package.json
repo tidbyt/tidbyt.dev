@@ -19,7 +19,7 @@
     "@babel/preset-typescript": "7.23.2",
     "@svgr/webpack": "7.0.0",
     "@types/jest": "29.5.7",
-    "@types/react-syntax-highlighter": "15.5.9",
+    "@types/react-syntax-highlighter": "15.5.10",
     "@types/react-test-renderer": "18.0.5",
     "@types/swagger-ui-react": "4.18.2",
     "@types/webpack-env": "1.18.3",
