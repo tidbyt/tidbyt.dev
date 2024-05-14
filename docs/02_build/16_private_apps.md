@@ -4,6 +4,10 @@ Private app hosting is now available for Tidbyt Plus and [Tidbyt for Teams](http
 
 To sign up for Tidbyt Plus, open the Tidbyt app on your phone and navigate to Settings -> Developer and click 'Deploy a Private App'.
 
+![PrivateApps](img/private-apps.png) 
+
+Private apps will be available to install through the Tidbyt phone app under the "Your Private Apps" section. 
+
 ## Create an app
 To create an app in the current working directory, run the following:
 
