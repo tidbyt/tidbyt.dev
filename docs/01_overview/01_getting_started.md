@@ -2,7 +2,7 @@
 
 [Tidbyt](https://tidbyt.com) is a retro display from the future 😎. It's a connected, smart display that shows weather, stocks, sports, and a whole lot more.
 
-![HelloWorld](../img/hello_world.png)
+![HelloWorld](img/hello_world.png)
 
 ### Getting Started
 
