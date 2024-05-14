@@ -32,6 +32,9 @@ better to display nothing at all, than to display stale data that the
 user will assume is correct.
 
 ## App cycle speed
+**Note:** `show_full_animation` only works when the app is deployed to Tidbyts servers.
+Please see [Publishing Apps](../04_publish/02_publishing_apps.md) or
+[Private App Hosting](../02_build/16_private_apps.md).
 
 Most users have multiple apps installed on their Tidbyts. By default,
 each will be displayed for about 15 seconds, although this _app cycle
