@@ -27,7 +27,8 @@ export default function Routes() {
             <ScrollToTop />
             <RouterRoutes>
                 {/* Custom pages */}
-                <Route path="/" element={<Home />} />
+                {/* <Route path="/" element={<Home />} /> */}
+                <Route path="/" element={<Navigate to='/docs/overview/getting-started' />}
                 <Route path='/console' element={<Main ><Console /></Main>} />
                 <Route path="/docs/api" element={<Main ><PublicAPI /></Main>} />
                 {/* Documentation */}
