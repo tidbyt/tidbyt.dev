@@ -1,6 +1,8 @@
 # Private Apps
 
-Private app hosting is now available for Tidbyt Plus and [Tidbyt for Teams](https://discuss.tidbyt.com/t/introducing-tidbyt-for-teams/5391) subscribers! Creating a new app, tailored to your needs, is quick and easy. While completely hosted in Tidbyt’s cloud, your apps are restricted to yourself, or members of your team.
+Private app hosting is now available for Tidbyt Plus and [Tidbyt for Teams](https://discuss.tidbyt.com/t/introducing-tidbyt-for-teams/5391) subscribers! Creating a new app, tailored to your needs, is quick and easy. While completely hosted in Tidbyt’s cloud, your apps are restricted to yourself, or members of your team. Unlike our community apps, private apps does not require code review from the Tidbyt Team.
+
+To sign up for Tidbyt Plus, open the Tidbyt app on your phone and navigate to Settings -> Developer and click 'Deploy a Private App'.
 
 ## Create an app
 To create an app in the current working directory, run the following:
