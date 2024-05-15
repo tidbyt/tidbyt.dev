@@ -33,7 +33,7 @@ pixlet serve hello_world.star
 
 You can view the result by navigating to [http://localhost:8080][3]:
 
-![](img/hello_world.png)
+![](img/hello_world-pixlet.png)
 
 [3]: http://localhost:8080
 
