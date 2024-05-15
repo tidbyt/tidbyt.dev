@@ -69,7 +69,7 @@ pixlet render schema_hello_world.star who="Tidbyt" small=True
 ```
 
 ## Icons
-Each schema field takes an `icon` value. We use the free icons from [Font Awesome](https://fontawesome.com/v6/search?s=solid%2Cbrands) at version 6.1.1 with the names camel cased. For example [users-cog](https://fontawesome.com/v6/icons/users-cog?style=solid&s=solid) should be `usersCog` in the `icon` value. When submitting to the community repo, the icon names are validated against this [icon map](https://github.com/tidbyt/community/blob/main/apps/icons.go).
+Each schema field takes an `icon` value. We use the free icons from [Font Awesome](https://fontawesome.com/v6/search?s=solid%2Cbrands) at version 6.1.1 with the names camel cased. For example [users-cog](https://fontawesome.com/v6/icons/users-cog?style=solid&s=solid) should be `usersCog` in the `icon` value. When submitting to the community repo, the icon names are validated against this [icon map](https://github.com/tidbyt/pixlet/blob/main/icons/icons.go).
 
 ## Dynamic Fields
 Pixlet offers two types of fields: basic fields like `Toggle` or `Text` and dynamic fields that take a `handler` method like `LocationBased` or `Typeahead`. For dynamic fields, the `handler` will get called with user inputs. What the handler returns is specific to the field.
