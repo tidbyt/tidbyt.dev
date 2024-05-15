@@ -82,4 +82,4 @@ Note: Scripts do not run on Tidbyt devices, only rendered WebP or GIF animations
 ### Publish your app
 
 Once you've got an app that's looking spiffy, you can
-[publish and share it with the community](../04_publish/01_community_apps.md) or [deploy it as a private app](16_private_apps.md)
+[publish and share it with the community](../04_publish/01_community_apps.md) or [deploy it as a private app](./16_private_apps.md)
