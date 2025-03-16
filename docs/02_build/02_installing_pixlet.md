@@ -14,10 +14,10 @@ Download the `pixlet` binary from [the latest release][1] and move it into your 
 
 ```bash
 # Download the archive.
-curl -LO https://github.com/tidbyt/pixlet/releases/download/v0.22.4/pixlet_0.22.4_linux_amd64.tar.gz
+curl -LO https://github.com/tidbyt/pixlet/releases/download/v0.34.0/pixlet_0.34.0_linux_amd64.tar.gz
 
 # Unpack the archive.
-tar -xvf pixlet_0.22.4_linux_amd64.tar.gz
+tar -xvf pixlet_0.34.0_linux_amd64.tar.gz
 
 # Ensure the binary is executable.
 chmod +x ./pixlet
