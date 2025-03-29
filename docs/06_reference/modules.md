@@ -62,6 +62,12 @@ def get_data(url):
         fail("GET %s failed with status %d: %s", url, res.status_code, res.body())
     return res.json()
 ```
+**NOTES ABOUT HTTP CACHE*:* 
+- **Scope:** the HTTP cache is scoped _per app_ and not _per installation_. All installations of your app will share the same cache. This is a common source of bugs!
+- **Minimum:** the client will cache requests for a minimum of 5 seconds
+- **Jitter:** the client will randomly select a TTL that is +/- 10% of the requested TTL
+- **Rate Limits:** the clients respects 429s, and will cache the response for period recommended by the API
+- **Cache Control:** if a developer does not request a TTL, and the API provides a max-age cache control header, the client will honor the response at a maximum of 1 hour
 
 ## Pixlet module: Cache
 
