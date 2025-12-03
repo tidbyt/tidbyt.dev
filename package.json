@@ -64,7 +64,7 @@
     "@mui/lab": "5.0.0-alpha.177",
     "@mui/material": "5.18.0",
     "@mui/system": "5.18.0",
-    "@reduxjs/toolkit": "1.9.7",
+    "@reduxjs/toolkit": "2.11.0",
     "@types/node": "18.19.130",
     "@types/react": "18.3.27",
     "@types/react-dom": "18.3.7",
