@@ -1,7 +1,9 @@
 # Installing Pixlet
+
 To use Pixlet, one first has to install the CLI tool.
 
 ## Install on macOS
+
 First, install [Homebrew](https://brew.sh/) on your computer. Then, in your terminal, run the following:
 
 ```
@@ -14,10 +16,10 @@ Download the `pixlet` binary from [the latest release][1] and move it into your 
 
 ```bash
 # Download the archive.
-curl -LO https://github.com/tidbyt/pixlet/releases/download/v0.22.4/pixlet_0.22.4_linux_amd64.tar.gz
+curl -LO https://github.com/tidbyt/pixlet/releases/download/v0.34.0/pixlet_0.34.0_linux_amd64.tar.gz
 
 # Unpack the archive.
-tar -xvf pixlet_0.22.4_linux_amd64.tar.gz
+tar -xvf pixlet_0.34.0_linux_amd64.tar.gz
 
 # Ensure the binary is executable.
 chmod +x ./pixlet
@@ -27,7 +29,8 @@ sudo mv pixlet /usr/local/bin/pixlet
 ```
 
 ## Install on Windows
-First, install a file archiver that can support `tar.gz` archives if you don't already have one. [NanaZip](https://apps.microsoft.com/store/detail/nanazip/9N8G7TSCL18R) works great if you don't know where to start. Once installed, Download the Windows `pixlet` binary from [the latest release][1] on GitHub. 
+
+First, install a file archiver that can support `tar.gz` archives if you don't already have one. [NanaZip](https://apps.microsoft.com/store/detail/nanazip/9N8G7TSCL18R) works great if you don't know where to start. Once installed, Download the Windows `pixlet` binary from [the latest release][1] on GitHub.
 
 Open the file with NanaZip and double click on the archive to see the contents. Then, click extract:
 ![windows NanaZip extract](img/windows_extract.png)
