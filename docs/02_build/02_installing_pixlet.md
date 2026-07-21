@@ -10,14 +10,16 @@ brew install tidbyt/tidbyt/pixlet
 
 ## Install on Linux
 
-Download the `pixlet` binary from [the latest release][1] and move it into your `PATH`. A complete example looks like the following:
+Download the `pixlet` binary from [the latest release][1] and move it into your `PATH`. The latest release
+will contain updated commands and fixes so you may want to repeat this install every few months.  A complete 
+example looks like the following:
 
 ```bash
 # Download the archive.
-curl -LO https://github.com/tidbyt/pixlet/releases/download/v0.22.4/pixlet_0.22.4_linux_amd64.tar.gz
+curl -LO https://github.com/tidbyt/pixlet/releases/download/v0.33.5/pixlet_0.33.5_linux_amd64.tar.gz
 
 # Unpack the archive.
-tar -xvf pixlet_0.22.4_linux_amd64.tar.gz
+tar -xvf pixlet_0.33.5_linux_amd64.tar.gz
 
 # Ensure the binary is executable.
 chmod +x ./pixlet
