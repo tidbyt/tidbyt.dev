@@ -71,6 +71,20 @@ pixlet render schema_hello_world.star who="Tidbyt" small=True
 ## Icons
 Each schema field takes an `icon` value. We use the free icons from [Font Awesome](https://fontawesome.com/v6/search?s=solid%2Cbrands) at version 6.1.1 with the names camel cased. For example [users-cog](https://fontawesome.com/v6/icons/users-cog?style=solid&s=solid) should be `usersCog` in the `icon` value. When submitting to the community repo, the icon names are validated against this [icon map](https://github.com/tidbyt/pixlet/blob/main/icons/icons.go).
 
+## Built-in Configuration
+Pixlet has some built-in configuration identifiers.
+
+### Timezone
+To get the timezone of the device on which the app is installed you can use the `$tz` identifier. Typical usage would look like this:
+```starlark
+DEFAULT_TIMEZONE = "America/Chicago"
+def main(config):
+  timezone = config.get("$tz", DEFAULT_TIMEZONE)
+
+  local_time = time.now().in_location(timezone)
+```
+When using `pixlet serve` or `pixlet render`, `config.get("$tz")` will return `None`. Use a default timezone configuration when developing as in the example.
+
 ## Dynamic Fields
 Pixlet offers two types of fields: basic fields like `Toggle` or `Text` and dynamic fields that take a `handler` method like `LocationBased` or `Typeahead`. For dynamic fields, the `handler` will get called with user inputs. What the handler returns is specific to the field.
 
