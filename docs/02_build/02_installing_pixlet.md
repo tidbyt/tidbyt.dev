@@ -8,7 +8,7 @@ First, install [Homebrew](https://brew.sh/) on your computer. Then, in your term
 brew install tidbyt/tidbyt/pixlet
 ```
 
-## Install on Linux
+## Install on Linux (Debian-based)
 
 Download the `pixlet` binary from [the latest release][1] and move it into your `PATH`. A complete example looks like the following:
 
@@ -25,6 +25,8 @@ chmod +x ./pixlet
 # Move the binary into your path.
 sudo mv pixlet /usr/local/bin/pixlet
 ```
+
+Non debian-based linux distros may experience some bugs with the binary. You may have to [install it from source](./04_advanced_installation.md).
 
 ## Install on Windows
 First, install a file archiver that can support `tar.gz` archives if you don't already have one. [NanaZip](https://apps.microsoft.com/store/detail/nanazip/9N8G7TSCL18R) works great if you don't know where to start. Once installed, Download the Windows `pixlet` binary from [the latest release][1] on GitHub. 
